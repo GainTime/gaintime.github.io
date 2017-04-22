@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="website">
+    <header class="gt-top-menu xs-left">
+      <img src="assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts.html"><li>Layouts</li></a>
+          <a href="components.html"><li>Componentes</li></a>
+          <a href="helpers.html"><li class="active">Auxiliares</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="text-center" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
+      <h1>Auxiliares</h1>
+      <p class="center" style="max-width: 500px;">
+        Algumas coisas em CSS são comuns no dia-a-dia do desenvolvimento, e achamos chato toda hora ter que voltar a escrevê-las. É por isso que montamos os auxiliares. :P
+      </p>
+      <span class="tag success">GA</span>
+      <span class="tag danger">IN</span>
+      <span class="tag warning">TI</span>
+      <span class="tag info">ME</span>
+    </section>
+    <section>
+      <h1>Flutuadores</h1>
+      <p>
+        Use as classes <code>left</code> e <code>right</code> para da um <i>quick float</i> em um elemento. <code>!important</code> é aplicado.
+      </p>
+      <div class="content-align fix-height success padding">
+        <button class="btn left" type="button" name="button">Left</button>
+        <button class="btn right" type="button" name="button">Right</button>
+      </div>
+    </section>
+    <section>
+      <h1>Corretor de altura</h1>
+      <p>
+        Quando usamos elementos flutuantes, o normal é que o elemento pai "se esqueça" dos filhos, e deixe de crescer em altura. Pois bem, para solucionar esse problema, trouxemos a classe <code>.fix-height</code>.
+      </p>
+      <div class="code-block html">
+        <pre>
+<code><span class="el">&lt</span>div<span class="attr"> class</span><span class="el">=</span><span class="value">"content-align fix-height success"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn left"</span><span class="el">&gt</span><span class="tx">Left</span><span class="el">&lt</span>/button<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn right</span><span class="el">&gt</span><span class="tx">Right</span><span class="el">&lt</span>/button<span class="el">&gt</span></code>
+<code><span class="el">&lt</span>/div<span class="el">&gt</span></code>
+        </pre>
+      </div>
+    </section>
+    <section>
+      <h1>Centralizador de bloco</h1>
+      <p>
+        Com a classe <code>.center</code>, definimos que um elemento é um bloco (<code>display: block</code>), e colocamos ele no centro através de <code>margin</code>.
+      </p>
+      <div class="code-block html">
+        <code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"center danger"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt</span>.....<span class="el">&lt/</span>div<span class="el">&gt</span></code>
+      </div>
+      <div class="center danger" style="width: 50px">.....</div>
+    </section>
+    <section>
+      <h1>Padding</h1>
+      <p>
+        Vai ver, tudo o que aquele elemento precisa é de um <code>.padding</code> padrão. :P
+      </p>
+      <div class="inform info">
+        <p>
+          Se você quiser apenas padding <strong>horizontal</strong>, utilize <code>.padding-lr</code>.
+        </p>
+        <p>
+          Se você quiser apenas padding <strong>vertical</strong>, utilize <code>.padding-tb</code>.
+        </p>
+      </div>
+      <div class="code-block html">
+        <code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"success padding"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt</span>.....<span class="el">&lt/</span>div<span class="el">&gt</span></code>
+      </div>
+      <div class="content-align">
+        <div class="success padding" style="width: 50px">.....</div>
+        <div class="danger padding-lr" style="width: 50px">.....</div>
+        <div class="warning padding-tb" style="width: 50px">!!!!!!!!!!!!</div>
+      </div>
+    </section>
+    <section>
+      <h1>Alinhador de conteúdo</h1>
+      <p>
+        A classe <code>.content-align</code> alinha todo o conteúdo diretamente ligado a ela (<code>></code>) horizontalmente e verticamente. Provoca <code>display: inline-block</code>.
+      </p>
+    </section>
+    <section>
+      <h1>Alinhadores de texto</h1>
+      <article class="dark padding">
+        <p class="text-left">Use <code>.text-left</code> para textos alinhados à esquerda.</p>
+        <p class="text-center">Use <code>.text-center</code> para textos alinhados ao centro.</p>
+        <p class="text-right">Use <code>.text-right</code> para textos alinhados à direita.</p>
+        <p class="text-justify" style="max-width: 150px">E por último, para textos justificados, você pode utilizar a classe <code>.text-justify</code>.</p>
+      </article>
+    </section>
+    <section>
+      <h1>Truncator</h1>
+      <p>
+        Alguns textos precisam ser cortados antes mesmo de terminarem, e é pra isso que serve a nossa classe <code>.truncate</code>. Observe:
+      </p>
+      <div class="code-block html">
+        <pre>
+<code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"inform"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"max-width: 300px"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>p <span class="attr">class</span><span class="el">=</span><span class="value">"truncate"</span><span class="el">&gt</span></code>
+    <code class="tx">Este é um texto muito longo e, por isso, deve ser truncado.</code>
+  <code><span class="el">&lt</span>/p<span class="el">&gt</span></code>
+<code><span class="el">&lt</span>/div<span class="el">&gt</span></code>
+        </pre>
+      </div>
+      <h2>Resultado</h2>
+      <div class="inform" style="max-width: 300px">
+        <p class="truncate">
+          Este é um texto muito longo e, por isso, deve ser truncado.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h1>Ocultadores</h1>
+      <p>
+        Quando estamos trabalhando com responsividade, é comum que queiramos ocultar elementos. Pensando nisso, criamos os ocultadores. Eles aplicam <code>display: none!important</code>.
+      </p>
+      <table class="gt-table striped" style="max-width: 800px">
+        <thead>
+          <tr>
+            <th>
+              Classe
+            </th>
+            <th>
+              Dispositivos muito pequenos (<=768px)
+            </th>
+            <th>
+              Dispositivos pequenos (<=992px)
+            </th>
+            <th>
+              Dispositivos médios (<=1200px)
+            </th>
+            <th>
+              Dispositivos grandes (1200 < x)
+            </th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>.hxs</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.hsm</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.hmd</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.hidden</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+            <td class="danger">Invisível</td>
+          </tr>
+          <tr>
+            <td>.hoxs</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.hosm</td>
+            <td>Visível</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.homd</td>
+            <td>Visível</td>
+            <td>Visível</td>
+            <td class="danger">Invisível</td>
+            <td>Visível</td>
+          </tr>
+          <tr>
+            <td>.holg</td>
+            <td>Visível</td>
+            <td>Visível</td>
+            <td>Visível</td>
+            <td class="danger">Invisível</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <h2>Exemplos de utilização:</h2>
+        <div class="">
+          <button type="button" name="button" class="hxs btn success">hxs</button>
+          <button type="button" name="button" class="hsm btn danger">hsm</button>
+          <button type="button" name="button" class="hmd btn info">hmd</button>
+          <button type="button" name="button" class="hidden btn dark">hidden</button>
+          <button type="button" name="button" class="hoxs btn success">hoxs</button>
+          <button type="button" name="button" class="hosm btn danger">hosm</button>
+          <button type="button" name="button" class="homd btn info">homd</button>
+          <button type="button" name="button" class="holg btn dark">holg</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1>Exibidores</h1>
+      <p>
+        Bom, como as vezes queremos que algo não seja exibido em determinada largura, as vezes queremos o contrário. Pensando nisso, criamos os exibidores. Eles aplicam <code>display: inline</code>.
+      </p>
+      <table class="gt-table striped" style="max-width: 800px">
+        <thead>
+          <tr>
+            <th>
+              Classe
+            </th>
+            <th>
+              Dispositivos muito pequenos (<=768px)
+            </th>
+            <th>
+              Dispositivos pequenos (<=992px)
+            </th>
+            <th>
+              Dispositivos médios (<=1200px)
+            </th>
+            <th>
+              Dispositivos grandes (1200 < x)
+            </th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>.vxs</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.vsm</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.vmd</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.visible</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+            <td class="info">Visível</td>
+          </tr>
+          <tr>
+            <td>.voxs</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.vosm</td>
+            <td>Invisível</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.vomd</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+            <td class="info">Visível</td>
+            <td>Invisível</td>
+          </tr>
+          <tr>
+            <td>.volg</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+            <td>Invisível</td>
+            <td class="info">Visível</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <h2>Exemplos de utilização:</h2>
+        <div class="">
+          <button type="button" name="button" class="vxs btn success">vxs</button>
+          <button type="button" name="button" class="vsm btn danger">vsm</button>
+          <button type="button" name="button" class="vmd btn info">vmd</button>
+          <button type="button" name="button" class="visible btn dark">visible</button>
+          <button type="button" name="button" class="voxs btn success">voxs</button>
+          <button type="button" name="button" class="vosm btn danger">vosm</button>
+          <button type="button" name="button" class="vomd btn info">vomd</button>
+          <button type="button" name="button" class="volg btn dark">volg</button>
+        </div>
+      </div>
+    </section>
+    <footer class="dark">
+      <p>
+        GainTime 2017
+      </p>
+    </footer>
+    <script type="text/javascript" src="assets/js/gaintime.min.js"></script>
+  </body>
+</html>
