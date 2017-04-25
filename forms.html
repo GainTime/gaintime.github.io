@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="website">
+    <header class="gt-top-menu xs-left">
+      <img src="assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts"><li>Layouts</li></a>
+          <a href="components"><li>Componentes</li></a>
+          <a href="forms"><li class="active">Formulários</li></a>
+          <a href="helpers"><li>Auxiliares</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="text-center" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
+      <h1>Formulários</h1>
+      <p class="center" style="max-width: 500px;">
+        Procuramos facilitar algumas coisas na hora de inserir e validar dados. :D
+      </p>
+      <span class="tag success">GA</span>
+      <span class="tag danger">IN</span>
+      <span class="tag warning">TI</span>
+      <span class="tag info">ME</span>
+    </section>
+    <section>
+      <h1>GT Form</code></h1>
+      <p>
+        O GainTime simplificou a estilização de formulários assumindo que, se o <code>form</code> é da classe <code>.gt-form</code>, todos os seus <code>inputs</code> devem ser estilizados. Aplica <code>max-width: 500px</code>.
+      </p>
+      <div class="inform info">
+        <p>
+          Experimente adicionar as classes <code>.small</code>, <code>.medium</code>, <code>.large</code> ou <code>.full</code>.
+        </p>
+      </div>
+      <div class="code-block html">
+        <code>
+          <span class="el">&lt</span>form
+          <span class="attr">class</span><span class="el">=</span><span class="value">"gt-form"</span>
+          <span class="attr">action</span><span class="el">=</span><span class="value">"myAction"</span>
+          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt</span>
+          <span class="tx">...</span>
+          <span class="el">&lt/</span>form<span class="el">&gt</span>
+        </code>
+      </div>
+      <form class="gt-form" action="." method="post">
+        <label for="name">Name</label>
+        <small>Este campo é apenas leitura</small>
+        <input id="name" type="text" name="name" data-validate="text" readonly value="Maria Hipotenusa da Silva">
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
+        <footer class="btn-group">
+          <button type="reset" name="button" class="btn danger">Cancel</button>
+          <button type="button" name="button" class="btn success">Submit</button>
+        </footer>
+      </form>
+    </section>
+    <section>
+      <h1>GT Form Inline</h1>
+      <p>
+        Substituindo <code>.gt-form</code> por <code>.gt-form-inline</code> você vai conseguir formulários com todo o seu conteúdo alinhado à esquerda.
+      </p>
+      <div class="inform info">
+        <p>
+          É aplicado <code>display: inline-block; width: auto</code> a todos (<code>*</code>) os elementos de <code>.gt-form-inline</code>.
+        </p>
+      </div>
+      <div class="code-block html">
+        <code>
+          <span class="el">&lt</span>form
+          <span class="attr">class</span><span class="el">=</span><span class="value">"gt-form-inline"</span>
+          <span class="attr">action</span><span class="el">=</span><span class="value">"myAction"</span>
+          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt</span>
+          <span class="tx">...</span>
+          <span class="el">&lt/</span>form<span class="el">&gt</span>
+        </code>
+      </div>
+      <form class="gt-form-inline" action="." method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" data-validate="text" readonly value="Maria Hipotenusa da Silva">
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
+        <footer class="btn-group">
+          <button type="reset" name="button" class="btn danger">Cancel</button>
+          <button type="button" name="button" class="btn success">Submit</button>
+        </footer>
+      </form>
+    </section>
+    <section>
+      <h1>Status</h1>
+      <p>
+        Como desabilitamos a estilização <code>outline</code> padrão dos browsers, atribuimos características próprias a alguns status.
+      </p>
+      <form class="gt-form full" action="index.html" method="post">
+        <h2>:focus, <code>.has-focus</code></h2>
+        <input class="field has-focus full" type="text" name="name" placeholder="Esta é a visualização de um input:focus">
+        <h2><code>.has-error</code></h2>
+        <input class="field has-error full" type="text" name="name" placeholder="Esta é a visualização de um input com erro">
+        <h2><code>.has-warning</code></h2>
+        <input class="field has-warning full" type="text" name="name" placeholder="Esta é a visualização de um input com warning">
+        <h2>disabled</h2>
+        <input type="text" name="name" value="Este input está desabilitado" disabled>
+        <h2>readonly</h2>
+        <input type="text" name="name" value="Este input é de apenas leitura" readonly>
+      </form>
+    </section>
+    <section>
+      <h1>Exemplos</h1>
+      <div class="inform info" style="max-width: 500px">
+        <ul>
+          <li><code>checkbox e radio</code> são alinhados horizontalmente por padrão.</li>
+          <li><code>textarea</code> é desabilitado o resize horizontal por padrão.</li>
+        </ul>
+      </div>
+      <form class="gt-form" action="index.html" method="post">
+        <label for="text">Input</label>
+        <input id="text" type="text" name="name" value="">
+        <label for="select">Select</label>
+        <select id="select">
+          <option value="option">Teste</option>
+        </select>
+        <label for="selectMultiple">Select Multiple</label>
+        <select id="selectMultiple" multiple>
+          <option value="option1">Teste 1</option>
+          <option value="option2">Teste 2</option>
+          <option value="option3">Teste 3</option>
+          <option value="option4">Teste 4</option>
+          <option value="option5">Teste 5</option>
+          <option value="option6">Teste 6</option>
+        </select>
+        <div class="vertical-list">
+          <label for="radio">
+            <input type="radio" name="name" value="">
+            Radio
+          </label>
+          <label for="checkbox">
+            <input id="checkbox" type="checkbox" name="name" value="">
+            Checkbox
+          </label>
+        </div>
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" name="name" rows="4"></textarea>
+      </form>
+    </section>
+    <section>
+      <h1>Inputs livres</h1>
+      <p>
+        Caso você queira aplicar a estilização dada aos inputs do <code>.gt-form</code> a inputs livres, basta adicionar a eles a classe <code>.field</code>.
+      </p>
+      <div class="code-block html">
+        <code>
+          <span class="el">&lt</span>input
+          <span class="attr">class</span><span class="el">=</span><span class="value">"field"</span>
+          <span class="attr">type</span><span class="el">=</span><span class="value">"text"</span><span class="el">&gt</span>
+        </code>
+      </div>
+      <label for="free">Free Input</label>
+      <input id="free" class="field" type="text" method="post">
+      <label for="freeSelect">Free Select</label>
+      <select class="field" id="freeSelect">
+        <option value="option">option</option>
+      </select>
+    </section>
+    <section>
+      <h1>Validações</h1>
+      <p>
+        Adicionamos alguns testes de validação ao gaintime. Para ativar, basta adicionar o atributo <code>data-validate</code> ao <code>input</code> com uma das seguintes opções:
+      </p>
+      <div class="inform warning">
+        <p>
+          As validações acontecem <code>on blur</code>.
+        </p>
+      </div>
+      <form class="gt-form" action="." method="post">
+        <h3>CPF</h3>
+        <p>
+          Formata e valida CPF.
+        </p>
+        <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
+        <h3>num</h3>
+        <p>Aceita apenas algarismos (0-9).</p>
+        <input id="age" type="text" name="age" data-validate="num" placeholder="0123456789">
+        <h3>text</h3>
+        <p>Aceita apenas letras, espaço e apóstrofo. Pensado para campos de 'nome completo' e afins.</p>
+        <input id="name" type="text" name="name" data-validate="text" placeholder="José Cateto Oposto">
+        <h3>email</h3>
+        <p>
+          Aceita apenas texto no formato de email.
+        </p>
+        <input id="email" type="email" name="email" data-validate='email'>
+      </form>
+      <div class="code-block html">
+        <code>
+          <span class="el">&lt</span>input
+          <span class="attr">type</span><span class="el">=</span><span class="value">"text"</span>
+          <span class="attr">data-validate</span><span class="el">=</span><span class="value">"cpf"</span><span class="el">&gt</span>
+        </code>
+      </div>
+    </section>
+    <footer class="dark">
+      <p>
+        GainTime 2017
+      </p>
+    </footer>
+    <script type="text/javascript" src="assets/js/gaintime.min.js"></script>
+  </body>
+</html>
