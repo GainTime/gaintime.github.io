@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="website">
+    <header class="gt-top-menu xs-left">
+      <img src="assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts"><li class="active">Layouts</li></a>
+          <a href="components"><li>Componentes</li></a>
+          <a href="forms"><li>Formulários</li></a>
+          <a href="helpers"><li>Auxiliares</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="text-center" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
+      <h1>Layouts</h1>
+      <p class="center" style="max-width: 500px;">
+        Já apresentamos a estrutura básica de um documento GainTime. Agora vamos apresentar os elementos básicos para compor uma estrutura legal e suas particularidades. :)
+      </p>
+      <span class="tag success">GA</span>
+      <span class="tag danger">IN</span>
+      <span class="tag warning">TI</span>
+      <span class="tag info">ME</span>
+    </section>
+    <section>
+      <h1>Sobre a <code>&ltbody&gt</code></h1>
+      <p>
+        Por padrão, a <code>body</code> do GainTime é colorida com a cor <span class="tag clean" style="background-color: #AEBDCA!important">#AEBDCA</span>. Dentre outros fatores, esta é uma maneira de o GainTime dizer "Olá Mundo!".
+      </p>
+      <h2>Default vs <code>.panel</code></h2>
+      <p>
+        Nós pensamos em 2 modelos para a nossa <code>body</code>, e esses modelos determinam apenas como as <code>section</code> irão se comportar.
+      </p>
+      <h3>Default</h3>
+      <p>
+        A configuração padrão das <code>section</code> do GainTime, dentre outras propriedades, inclui o código abaixo, e você não precisa fazer nada para isso.
+      </p>
+      <div class="code-block css">
+        <pre>
+<code><span class="key">section</span></code>
+  <code>
+    box-shadow: <span class="attr">unset</span>
+  </code>
+  <code>
+    margin: <span class="attr">0</span>
+  </code>
+  <code>
+    width: <span class="attr">100%</span>
+  </code>
+        </pre>
+      </div>
+      <h3><code>.panel</code></h3>
+      <p>
+        De outra maneira, se você adicionar a classe <code>.panel</code> à <code>body</code>, vai alterar o comportamento de todas as <code>section</code>, e o seguinte código fará a nova configuração:
+      </p>
+      <div class="code-block css">
+        <pre>
+<code><span class="key">section</span></code>
+  <code>
+    box-shadow: <span class="attr">0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.2)</span>
+  </code>
+  <code>
+    margin: <span class="attr">30px auto</span>
+  </code>
+  <code>
+    width: <span class="attr">90%</span>
+  </code>
+        </pre>
+      </div>
+      <p>
+        Esta implementação remete à primeira versão do GainTime que era focada apenas em painéis administrativos para websites.
+      </p>
+      <div class="inform info">
+        <h2>.container</h2>
+        <p>
+          Se você desejar uma visualização como a do <code>.panel</code> em alguma <code>section</code> do Default, basta adicionar a classe <code>.container</code> à respectiva <code>section</code>.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h1>GT top menu</h1>
+      <p>
+        Construímos um cabeçalho padrão para menus de navegação que é invocado pela classe <code>.gt-top-menu</code>. A apresentação dele é idêntica à do menu deste site, e deve seguir a seguinte construção:
+      </p>
+      <div class="code-block html">
+        <pre>
+<code><span class="el">&lt</span>header <span class="attr">class</span><span class="el">=</span><span class="value">"gt-top-menu xs-left"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>img src="assets/img/gaintime.png" alt="" /<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>label <span class="attr">class</span><span class="el">=</span><span class="value">"menu-toggle"</span><span class="el">&gt</span></code>
+    <code><span class="el">&lt</span>svg viewBox="0 0 24 24"<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"<span class="el">&gt</span><span class="el">&lt</span>/path<span class="el">&gt</span></code>
+    <code><span class="el">&lt/</span>svg<span class="el">&gt</span></code>
+  <code><span class="el">&lt/</span>label<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>nav<span class="el">&gt</span></code>
+    <code><span class="el">&lt</span>ul<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>a <span class="attr">href</span><span class="el">=</span><span class="value">"."</span><span class="el">&gt</span><span class="el">&lt</span>li<span class="el">&gt</span><span class="el">Como começar</span><span class="el">&lt/</span>li<span class="el">&gt</span><span class="el">&lt/</span>a<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>a <span class="attr">href</span><span class="el">=</span><span class="value">"layouts"</span><span class="el">&gt</span><span class="el">&lt</span>li class="active"><span class="el">Layouts</span><span class="el">&lt/</span>li<span class="el">&gt</span><span class="el">&lt/</span>a<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>a <span class="attr">href</span><span class="el">=</span><span class="value">"components"</span><span class="el">&gt</span><span class="el">&lt</span>li<span class="el">&gt</span><span class="el">Componentes</span><span class="el">&lt/</span>li<span class="el">&gt</span><span class="el">&lt/</span>a<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>a <span class="attr">href</span><span class="el">=</span><span class="value">"forms"</span><span class="el">&gt</span><span class="el">&lt</span>li<span class="el">&gt</span><span class="el">Formulários</span><span class="el">&lt/</span>li<span class="el">&gt</span><span class="el">&lt/</span>a<span class="el">&gt</span></code>
+      <code><span class="el">&lt</span>a <span class="attr">href</span><span class="el">=</span><span class="value">"helpers"</span><span class="el">&gt</span><span class="el">&lt</span>li<span class="el">&gt</span><span class="el">Auxiliares</span><span class="el">&lt/</span>li<span class="el">&gt</span><span class="el">&lt/</span>a<span class="el">&gt</span></code>
+    <code><span class="el">&lt/</span>ul<span class="el">&gt</span></code>
+  <code><span class="el">&lt/</span>nav<span class="el">&gt</span></code>
+<code><span class="el">&lt/</span>header<span class="el">&gt</span></code>
+        </pre>
+      </div>
+      <div class="inform info">
+        <h2>Detalhes</h2>
+        <p>
+          A classe <code>.gt-top-menu</code> cria uma caixa <code>#FFF</code> devidamente estilizada e pronta para receber os elementos que compõem o nosso menu. Contudo, para que o menu seja responsivo é preciso adicionar uma das classes auxiliares que são explicadas abaixo.
+        </p>
+      </div>
+      <ul>
+        <li><code>.xs-left</code> - O menu se mantém no formato mobile, sentido direita para esquerda, até 768px.</li>
+        <li><code>.sm-left</code> - O menu se mantém no formato mobile, sentido direita para esquerda, até 992px.</li>
+        <li><code>.md-left</code> - O menu se mantém no formato mobile, sentido direita para esquerda, até 1200px.</li>
+        <li><code>.lg-left</code> - O menu se mantém sempre no formato mobile, sentido direita para esquerda.</li>
+      </ul>
+      <ul>
+        <li><code>.xs-right</code> - O menu se mantém no formato mobile, sentido esquerda para direita, até 768px.</li>
+        <li><code>.sm-right</code> - O menu se mantém no formato mobile, sentido esquerda para direita, até 992px.</li>
+        <li><code>.md-right</code> - O menu se mantém no formato mobile, sentido esquerda para direita, até 1200px.</li>
+        <li><code>.lg-right</code> - O menu se mantém sempre no formato mobile, sentido esquerda para direita.</li>
+      </ul>
+      <h3><code>.menu-toggle</code></h3>
+      <p>
+        A classe <code>.menu-toggle</code> é responsável por guardar o componente que dispara a abertura e o fechamento da versão mobile do menu. No nosso exemplo utilizamos um <code>svg</code>.
+      </p>
+      <h3><code>.active</code></h3>
+      <p>
+        Você pode utilizar a classe <code>.active</code> para destacar uma <code>li</code>. Normalmente utilizado para destacar o item que representa a página atual.
+      </p>
+    </section>
+    <section>
+      <h1>Footer</h1>
+      <p>
+        As <code>footer</code> não tem nenhuma estilização muito especial. Elas apenas seguem o padrão de espaçamento das <code>section</code> se forem filhas diretas da <code>body</code> ou de uma <code>main</code>.
+      </p>
+    </section>
+    <section>
+      <h1>Tabelas</h1>
+      <p>
+        Nós planegamos a classe <code>.gt-table</code> para estilizar as tabelas com um layout mais agradável.
+      </p>
+      <table class="gt-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>Maria C.</td>
+            <td>maria@email.com</td>
+            <td><div class="bar" data-percentage="80%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Amanda C.</td>
+            <td>amanda@email.com</td>
+            <td><div class="bar" data-percentage="20%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">
+              Torne-se forte. :)
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <h2>Tabela listrada</h2>
+      <p>
+        Para obter uma tabela listrada, basta adicionar a classe <code>.striped</code>.
+      </p>
+      <table class="gt-table striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>Maria C.</td>
+            <td>maria@email.com</td>
+            <td><div class="bar" data-percentage="80%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Amanda C.</td>
+            <td>amanda@email.com</td>
+            <td><div class="bar" data-percentage="20%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">
+              Torne-se forte. :)
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <h2>Tabela com hover</h2>
+      <p>
+        Adicionando a classe <code>.hovered</code> na <code>table</code> você vai obter um efeito de hover nas suas <code>tbody > tr</code>.
+      </p>
+      <table class="gt-table striped hovered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>Maria C.</td>
+            <td>maria@email.com</td>
+            <td><div class="bar" data-percentage="80%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Amanda C.</td>
+            <td>amanda@email.com</td>
+            <td><div class="bar" data-percentage="20%"></div></td>
+            <td>
+              <a class="action success" title="Edit Page"><i class="fa fa-edit"></i> <span>Edit</span></a>
+              <a class="action danger" title="Delete"><i class="fa fa-trash"></i> <span>Delete</span></a>
+              <a class="action info" title="Show Page"><i class="fa fa-eye"></i> <span>Show</span></a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">
+              Torne-se forte. :)
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="code-block html">
+        <pre><code><span class="el">&lt</span>table <span class="attr">class</span><span class="el">=</span><span class="value">"gt-table striped hovered"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>thead<span class="el">&gt</span></code>
+    <code><span class="tx">...</span></code>
+  <code><span class="el">&lt/</span>thead<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>tbody <span class="attr">class</span><span class="el">=</span><span class="value">"text-center"</span><span class="el">&gt</span></code>
+    <code><span class="tx">...</span></code>
+  <code><span class="el">&lt/</span>tbody<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>tfoot<span class="el">&gt</span></code>
+    <code><span class="tx">...</span></code>
+  <code><span class="el">&lt/</span>tfoot<span class="el">&gt</span></code>
+<code><span class="el">&lt/</span>table<span class="el">&gt</span></code></pre>
+      </div>
+    </section>
+    <footer class="dark">
+      <p>
+        GainTime 2017
+      </p>
+    </footer>
+    <script type="text/javascript" src="assets/js/gaintime.min.js"></script>
+  </body>
+</html>
