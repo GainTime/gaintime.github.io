@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="../assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="panel">
+    <header class="gt-top-menu xs-left">
+      <img src="../assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Início</li></a>
+          <a href="news.html"><li class="active">Notícias</li></a>
+          <a href="users.html"><li>Usuários</li></a>
+          <a href="contact.html"><li>Contato</li></a>
+          <a href="login.html"><li>Sair</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="top-bar">
+        <h2>Editar Notícia</h2>
+      </div>
+      <form action="" method="POST" enctype="multipart/form-data" class="gt-form">
+        <div class="inform warning">Os campos com * são obrigatórios.</div>
+        <label for="notice_title">Título da Notícia *</label>
+        <input type="text" name="notice[title]" value="" required>
+        <label for="notice_author">Subtítulo *</label>
+        <input type="text" name="notice[subtitle]" value="" required>
+        <label for="archive">Categoria</label>
+        <select name="" id="archive">
+          <option value="">Esportes</option>
+          <option value="">Música</option>
+        </select>
+        <label for="notice_description">Texto *</label>
+        <textarea name="notice[text]" id="area1" cols="10" rows="5" ></textarea>
+        <input type="file" name="picture" value="" id="changer">
+        <div class="btn-pair">
+          <a href="news.html" class="btn danger">Voltar</a>
+          <input type="submit" class="btn success" value="Salvar">
+        </div>
+      </form>
+    </section>
+    <footer>
+      <p>Área administrativa do<a href="https://github.com/GainTime/gainTime"> GainTime</a></p>
+    </footer>
+    <script src="../assets/js/gaintime.min.js"></script>
+  </body>
+</html>

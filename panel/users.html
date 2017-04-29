@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="../assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="panel">
+    <header class="gt-top-menu xs-left">
+      <img src="../assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Início</li></a>
+          <a href="news.html"><li>Notícias</li></a>
+          <a href="users.html"><li class="active">Usuários</li></a>
+          <a href="contact.html"><li>Contato</li></a>
+          <a href="login.html"><li>Sair</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="top-bar">
+        <h1>Usuários</h1>
+      </div>
+      <table class="gt-table striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th class="hxs">email</th>
+            <th class="hxs">telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>JP Rodrigues</td>
+            <td class="hxs">a@email.com</td>
+            <td class="hxs">(00) 0000-0000</td>
+            <td>
+              <a href="edit-user.html" class="action success" title="Editar Usuário">Editar</a>
+              <a href="" data-ask="Deseja deletar JP Rodrigues?" class="action danger" title="Excluir Usuário">Deletar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      <p>Área administrativa do<a href="https://github.com/GainTime/gainTime"> GainTime</a></p>
+    </footer>
+    <script src="../assets/js/gaintime.min.js"></script>
+  </body>
+</html>
