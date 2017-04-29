@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="../assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="panel">
+    <header class="gt-top-menu xs-left">
+      <img src="../assets/img/gaintime.png" alt="" />
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Início</li></a>
+          <a href="news.html"><li class="active">Notícias</li></a>
+          <a href="users.html"><li>Usuários</li></a>
+          <a href="contact.html"><li>Contato</li></a>
+          <a href="login.html"><li>Sair</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="top-bar">
+        <h1>Notícias</h1>
+        <a href="add-news.html" class="btn btn-add">Adicionar</a>
+      </div>
+      <table class="gt-table striped">
+        <thead>
+          <tr>
+            <th>Noticias</th>
+            <th class="hxs">Autor</th>
+            <th class="hxs">Data de criação</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>Lançamento do<a href="https://github.com/GainTime/gainTime"> GainTime</a></td>
+            <td class="hxs">JP Rodrigues</td>
+            <td class="hxs">25-12-2020, 19:30</td>
+            <td>
+              <a href="edit-news.html" class="action success" title="Editar Noticia">Editar</a>
+              <a href="." class="action danger" title="Excluir Noticia" data-ask="Deseja mesmo deletar esta notícia?">Deletar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      <div>
+        <p>Área administrativa do<a href="https://github.com/GainTime/gainTime"> GainTime</a></p>
+      </div>
+    </footer>
+    <script src="../assets/js/gaintime.min.js"></script>
+  </body>
+</html>
