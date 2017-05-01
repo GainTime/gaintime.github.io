@@ -152,6 +152,27 @@
       <p>
         Você pode utilizar a classe <code>.active</code> para destacar uma <code>li</code>. Normalmente utilizado para destacar o item que representa a página atual.
       </p>
+      <h2>Menu Fixo</h2>
+      <p>
+        Para obter um menu que não acompanha o scroll da página, um menu fixo, basta adicionar a classe <code>.fixed</code> ao <code>.gt-top-menu</code>
+      </p>
+      <div class="code-block html">
+        <code><span class="el">&lt</span>header <span class="attr">class</span><span class="el">=</span><span class="value">"gt-top-menu xs-left fixed"</span><span class="el">&gt</span></code>
+        ...
+        <code><span class="el">&lt/</span>header<span class="el">&gt</span></code>
+      </div>
+      <h2><a href="hotsite">Exemplo</a></h2>
+      <div class="inform danger">
+        Quando criamos um menu fixo, automaticamente, o elemento seguinte ficará atrás deste menu, e parte dele ficará encoberta. Para resolver isso, basta utilizar a classe <code>.first</code> no próximo elemento.
+      </div>
+      <div class="code-block html">
+        <code><span class="el">&lt</span>header <span class="attr">class</span><span class="el">=</span><span class="value">"gt-top-menu xs-left fixed"</span><span class="el">&gt</span></code>
+        ...
+        <code><span class="el">&lt/</span>header<span class="el">&gt</span></code>
+        <code><span class="el">&lt</span>section <span class="attr">class</span><span class="el">=</span><span class="value">"first"</span><span class="el">&gt</span></code>
+        ...
+        <code><span class="el">&lt/</span>section<span class="el">&gt</span></code>
+      </div>
     </section>
     <section>
       <h1>Footer</h1>
