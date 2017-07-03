@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "gaintime",
+        "raw": "gaintime@^2.2.1",
         "scope": null,
         "escapedName": "gaintime",
         "name": "gaintime",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.2.1",
+        "spec": ">=2.2.1 <3.0.0",
+        "type": "range"
       },
       "/var/www/gaintime/site"
     ]
   ],
-  "_from": "gaintime@latest",
+  "_from": "gaintime@>=2.2.1 <3.0.0",
   "_id": "gaintime@2.2.1",
   "_inCache": true,
   "_location": "/gaintime",
@@ -29,21 +29,22 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "gaintime",
+    "raw": "gaintime@^2.2.1",
     "scope": null,
     "escapedName": "gaintime",
     "name": "gaintime",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.2.1",
+    "spec": ">=2.2.1 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
   "_resolved": "file:gaintime",
   "_shasum": "80429c0c3b0ee927536fbb126465035545e857ae",
   "_shrinkwrap": null,
-  "_spec": "gaintime",
+  "_spec": "gaintime@^2.2.1",
   "_where": "/var/www/gaintime/site",
   "author": {
     "name": "JP Rodrigues 70jprodrigues@gmail.com"
