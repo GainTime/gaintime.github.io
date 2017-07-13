@@ -27,6 +27,7 @@
           <a href="components"><li class="active">Componentes</li></a>
           <a href="forms"><li>Formulários</li></a>
           <a href="helpers"><li>Auxiliares</li></a>
+          <a href="flex"><li>Flex Box</li></a>
           <a href="grid"><li>Grid System</li></a>
           <li class="hxs dropdown-right">
             <span>Exemplos</span>
@@ -49,6 +50,107 @@
       <span class="tag danger">IN</span>
       <span class="tag warning">TI</span>
       <span class="tag info">ME</span>
+    </section>
+    <section>
+      <h1>Modals</h1>
+      <p>
+        Modals são caixas de diálogo que sobrepõem a página de maneira inteligente e agradável. São muito utilizadas para formulários ou informações rápidas.
+      </p>
+      <div class="inform warning">
+        <ul>
+          <li>
+            Só é possível abrir um modal por vez.
+          </li>
+          <li>
+            Modals fecham quando a tecla <code>esc</code> é pressionada.
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <button class="btn success" type="button" name="button" data-modal="first-modal">Clique-me, sou um modal.</button>
+        <div class="gt-modal">
+          <div  id="first-modal" class="modal">
+            <button class="modal-close">×</button>
+            <div class="modal-header">
+              <h1>Hey, laddys</h1>
+            </div>
+            <div class="modal-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="btn danger" type="button" name="button" data-modal="second-modal">Clique-me, sou um GRANDE modal.</button>
+        <div class="gt-modal">
+          <div  id="second-modal" class="modal">
+            <button class="modal-close">×</button>
+            <div class="modal-header">
+              <h1>Hey, laddys</h1>
+            </div>
+            <div class="modal-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-block html">
+<pre>
+<code>
+  <span class="tx">&lt!-- Um elemento com o atributo data-modal dispara um modal que possui o id informado no data-modal. --&gt</span>
+</code>
+<code>
+  <span class="el">&lt</span>button
+  <span class="attr">class</span><span class="el">=</span><span class="value">"btn info"</span> <span class="attr">data-modal</span><span class="el">=</span><span class="value">"myModal"</span><span class="el">&gt</span><span class="tx">My Modal</span><span class="el">&lt/</span>button<span class="el">&gt</span>
+</code>
+
+<code>
+  <span class="el">&lt</span>div
+  <span class="attr">class</span><span class="el">=</span><span class="value">"gt-modal"</span><span class="el">&gt</span>
+</code>
+  <code>
+    <span class="tx">&lt!-- Aqui você vai atribuir um id ao seu modal --&gt</span>
+  </code>
+  <code>
+    <span class="el">&lt</span>div
+    <span class="func">id</span><span class="el">=</span><span class="value">"myModal"</span> <span class="attr">class</span><span class="el">=</span><span class="value">"modal"</span><span class="el">&gt</span>
+  </code>
+    <code>
+      <span class="tx">&lt!-- Este botão é responsável por fechar o modal --&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>button
+      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-close"</span> <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span>×<span class="el">&lt/</span>button<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-body"</span><span class="el">&gt</span>
+    </code>
+      <code>
+        <span class="tx">&lt!-- Digite o conteúdo do modal aqui --&gt</span>
+      </code>
+    <code>
+      <span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+  <code>
+    <span class="el">&lt/</span>div<span class="el">&gt</span>
+  </code>
+<code>
+  <span class="el">&lt/</span>div<span class="el">&gt</span>
+</code>
+</pre>
+      </div>
     </section>
     <section>
       <h2>Botões</h2>
@@ -420,7 +522,7 @@
       </div>
       <div class="col">
         <p>
-          Versão v2.2.1
+          Versão v2.2.2
         </p>
       </div>
     </footer>

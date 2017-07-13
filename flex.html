@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="JP Rodrigues">
+    <meta name="description" content="O GainTime é um novo framework de HTML, CSS e JS para desenvolvimento de projetos responsivos, focado na simplicidade.">
+    <link rel="stylesheet" href="gaintime/css/gaintime.min.css" media="screen" title="no title">
+    <link rel="icon" type="image/png" href="assets/img/ico.png">
+    <title>GainTime</title>
+  </head>
+  <body class="website">
+    <header class="gt-top-menu sm-left">
+      <a href=".">
+        <img src="assets/img/gaintime.png" alt="GainTime" title="GainTime" />
+      </a>
+      <label class="menu-toggle">
+        <svg viewBox="0 0 24 24">
+          <path fill="#333" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+      <nav>
+        <ul>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts"><li>Layouts</li></a>
+          <a href="components"><li>Componentes</li></a>
+          <a href="forms"><li>Formulários</li></a>
+          <a href="helpers"><li>Auxiliares</li></a>
+          <a href="flex"><li class="active">Flexbox</li></a>
+          <a href="grid"><li>Grid System</li></a>
+          <li class="hxs dropdown-right">
+            <span>Exemplos</span>
+            <ul>
+              <a href="hotsite" target="_blank"><li>WebSite</li></a>
+              <a href="panel" target="_blank"><li>Painel</li></a>
+            </ul>
+          </li>
+          <a class="voxs" href="hotsite" target="_blank"><li>Exemplo: WebSite</li></a>
+          <a class="voxs" href="panel" target="_blank"><li>Exemplo: Painel</li></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="text-center" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
+      <h1>Flexbox</h1>
+      <p class="center" style="max-width: 500px;">
+        As Flexbox são uma maneira simples e rápida de se obter um layout responsivo.
+      </p>
+      <span class="tag success">GA</span>
+      <span class="tag danger">IN</span>
+      <span class="tag warning">TI</span>
+      <span class="tag info">ME</span>
+    </section>
+    <section>
+      <h1>Flexbox??</h1>
+      <p>
+        Caixas flexíveis, ou flexbox, é um novo modo de layout no CSS3.
+      </p>
+      <p>
+        O uso de flexbox garante que os elementos se comportem de maneira previsível quando o layout da página deve acomodar diferentes tamanhos de tela e diferentes dispositivos de exibição.
+      </p>
+      <p>
+        Para muitas aplicações, o modelo de caixa flexível se apresenta muito melhor do que o modelo de blocos, uma vez que não usa flutuadores, nem as margens do recipiente flex se desmoronam com as margens de seus conteúdos.
+      </p>
+      <h2>Como funcionam as flexbox do GainTime?</h2>
+      <p>
+        Existem diversas aplicações para flexbox com diversas variações, mas no GainTime, a nossa preocupação é que, num cenário onde n colunas possuem m conteúdos de s tamanhos diferentes, todas as n colunas tenham a mesma altura.
+      </p>
+      <div class="inform danger">
+        <p>
+          No GainTime, as flexboxes só existem em telas > 768px (.sm), telas inferiores a isso (.xs) aplicam o layout de blocos.
+        </p>
+      </div>
+      <h2><code>.flex-box</code></h2>
+      <p>
+        Aplicando a classe <code>.flex-box</code>, todos os elementos <code>.col</code> que são filhos diretos de <code>.flex-box</code> se distribuem automagicamente em largura, e terão sempre a mesma altura, desde que permaneçam na mesma linha.
+      </p>
+      <div class="code-block html">
+<pre>
+<code>
+  <span class="el">&lt</span>div
+  <span class="attr">class</span><span class="el">=</span><span class="value">"flex-box"</span><span class="el">&gt</span>
+</code>
+  <code>
+    <span class="el">&lt</span>div
+    <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+  </code>
+  <code>
+    <span class="el">&lt</span>div
+    <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+  </code>
+<code>
+  <span class="el">&lt/</span>div<span class="el">&gt</span>
+</code>
+</pre>
+      </div>
+      <div class="flex-box">
+        <div class="col info padding">
+          <h2>It's a big div</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="col danger padding">
+          <h2>It isn't a big div</h2>
+          <p>
+            But it's big
+          </p>
+        </div>
+        <div class="col warning padding"></div>
+        <div class="col success padding"></div>
+      </div>
+      <h2>Sem <code>.flex-box</code></h2>
+      <div class="content-align">
+        <div class="info padding" style="width: calc(25% - 10px)">
+          <h2>It's a big div</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="danger padding">
+          <h2>It isn't a big div</h2>
+          <p>
+            But it's big
+          </p>
+        </div>
+        <div class="warning padding"></div>
+        <div class="success padding"></div>
+      </div>
+    </section>
+    <section>
+      <h1>Dividindo em múltiplas linhas</h1>
+      <p>
+        Bom, como já dissemos, a <code>.flexbox</code> iguala a altura das <code>.col</code> que estão na mesma linha. O que acontece é que as vezes, quando estamos trabalhando com um conteúdo que é preenchido automaticamente por uma linguagem de programação (como uma listagem de usuários, por exemplo), queremos que o nosso conteúdo passe para a próxima linha automaticamente, sem "quebrar" a visualização. Para isso, pensamos na classe <code>.wrap</code> para acompanhar a <code>.flex-box</code>. Esta classe supõem que a largaura das <code>.col</code> foi determinada pelo programador.
+      </p>
+      <div class="inform info">
+        <p>
+          Consideramos que a melhor forma de obter múltiplas linhas é utilizando o nosso <a href="grid">Grid-System baseado em caixas flexíveis</a>.
+        </p>
+      </div>
+      <div class="left padding" style="min-width: 50%">
+        <h1>Utilizando width e max-width:</h1>
+        <div class="code-block css">
+<pre>
+  <code>.col <span class="el">{</span></code>
+    <code><span class="attr">width</span><span class="el">: </span><span class="value">45%</span><span class="el">;</span></code>
+    <code><span class="attr">max-width</span><span class="el">: </span><span class="value">45%</span><span class="el">;</span></code>
+  <code><span class="el">}</span></code>
+</pre>
+        </div>
+        <div >
+          <h3 class="text-center">.flex-box.wrap</h3>
+          <div class="flex-box wrap">
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+          </div>
+        </div>
+        <div >
+          <h3 class="text-center">.flex-box</h3>
+          <div class="flex-box">
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+            <div class="col padding info" style="width: 45%; max-width: 45%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="left padding" style="min-width: 50%">
+        <h1>Utilizando width:</h1>
+        <div class="code-block css">
+<pre>
+  <code>.col <span class="el">{</span></code>
+    <code><span class="attr">width</span><span class="el">: </span><span class="value">45%</span><span class="el">;</span></code>
+  <code><span class="el">}</span></code>
+
+</pre>
+        </div>
+        <div style="">
+          <h3 class="text-center">.flex-box.wrap</h3>
+          <div class="flex-box wrap">
+            <div class="col padding info" style="width: 45%"></div>
+            <div class="col padding info" style="width: 45%"></div>
+            <div class="col padding info" style="width: 45%"></div>
+          </div>
+        </div>
+        <div style="">
+          <h3 class="text-center">.flex-box</h3>
+          <div class="flex-box">
+            <div class="col padding info" style="width: 45%"></div>
+            <div class="col padding info" style="width: 45%"></div>
+            <div class="col padding info" style="width: 45%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1>Aninhamento</h1>
+      <p>
+        É possível aninhar flexboxes, basta definir uma <code>.col</code> como <code>.flex-box</code>.
+      </p>
+      <div class="flex-box">
+       <div class="col info padding flex-box">
+         <div class="col danger flex-box">
+           <div class="col padding warning"></div>
+           <div class="col padding info"></div>
+         </div>
+         <div class="col warning"></div>
+       </div>
+       <div class="col flex-box dark padding">
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+         <div class="col padding white"></div>
+       </div>
+     </div>
+      <div class="code-block html">
+<pre>
+<code>
+  <span class="el">&lt</span>div
+  <span class="attr">class</span><span class="el">=</span><span class="value">"flex-box"</span><span class="el">&gt</span>
+</code>
+  <code>
+    <span class="el">&lt</span>div
+    <span class="attr">class</span><span class="el">=</span><span class="value">"col flex-box"</span><span class="el">&gt</span>
+  </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col flex-box"</span><span class="el">&gt</span>
+    </code>
+      <code>
+        <span class="el">&lt</span>div
+        <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+      </code>
+      <code>
+        <span class="el">&lt</span>div
+        <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+      </code>
+    <code>
+      <span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+  <code>
+    <span class="el">&lt/</span>div<span class="el">&gt</span>
+  </code>
+  <code>
+    <span class="el">&lt</span>div
+    <span class="attr">class</span><span class="el">=</span><span class="value">"col flex-box"</span><span class="el">&gt</span>
+  </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+    <code>
+      <span class="el">&lt</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"col"</span><span class="el">&gt</span><span class="el">&lt/</span>div<span class="el">&gt</span>
+    </code>
+  <code>
+    <span class="el">&lt/</span>div<span class="el">&gt</span>
+  </code>
+<code>
+  <span class="el">&lt/</span>div<span class="el">&gt</span>
+</code>
+</pre>
+      </div>
+    </section>
+    <footer class="dark flex-box">
+      <div class="col">
+        <p>
+          <strong>GainTime</strong>, por <a href="https://github.com/jprodrigues70">JP Rodrigues</a>
+        </p>
+        <p>Código sob a licença <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <a href="https://github.com/GainTime/gainTime" class="content-align">
+          <svg fill="#FFF" aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> <p>
+            GitHub
+          </p>
+        </a>
+      </div>
+      <div class="col">
+        <p>
+          Contribua com o <a href="https://github.com/GainTime/gaintime-factory">GainTime</a>.
+        </p>
+        <p>
+          Faça <a href="https://github.com/GainTime/gaintime-factory/issues">report de erros</a>!
+        </p>
+        <p>
+          Faça <a href="https://github.com/GainTime/gaintime-factory/issues">sugestões</a>!
+        </p>
+      </div>
+      <div class="col">
+        <p>
+          Versão v2.2.2
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="gaintime/js/gaintime.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100008959-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
