@@ -22,14 +22,22 @@
       </label>
       <nav>
         <ul>
-          <li><a href=".">Como começar</a></li>
-          <li><a href="layouts">Layouts</a></li>
-          <li><a href="components">Componentes</a></li>
-          <li class="active"><a href="forms">Formulários</a></li>
-          <li><a href="helpers">Auxiliares</a></li>
-          <li><a href="flex">Flex Box</a></li>
-          <li><a href="grid">Grid System</a></li>
-          <li><a href="hotsite" target="_blank">Exemplo</a></li>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts"><li>Layouts</li></a>
+          <a href="components"><li>Componentes</li></a>
+          <a href="forms"><li class="active">Formulários</li></a>
+          <a href="helpers"><li>Auxiliares</li></a>
+          <a href="flex"><li>Flex Box</li></a>
+          <a href="grid"><li>Grid System</li></a>
+          <li class="hxs dropdown-right">
+            <span>Exemplos</span>
+            <ul>
+              <a href="hotsite" target="_blank"><li>WebSite</li></a>
+              <a href="panel" target="_blank"><li>Painel</li></a>
+            </ul>
+          </li>
+          <a class="voxs" href="hotsite" target="_blank"><li>Exemplo: WebSite</li></a>
+          <a class="voxs" href="panel" target="_blank"><li>Exemplo: Painel</li></a>
         </ul>
       </nav>
     </header>
@@ -55,21 +63,18 @@
       </div>
       <div class="code-block html">
         <code>
-          <span class="el">&lt;</span>form
+          <span class="el">&lt</span>form
           <span class="attr">class</span><span class="el">=</span><span class="value">"gt-form"</span>
           <span class="attr">action</span><span class="el">=</span><span class="value">"myAction"</span>
-          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt;</span>
+          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt</span>
           <span class="tx">...</span>
-          <span class="el">&lt;/</span>form<span class="el">&gt;</span>
+          <span class="el">&lt/</span>form<span class="el">&gt</span>
         </code>
       </div>
       <form class="gt-form" action="." method="post">
-        <label for="name_1">Name</label>
+        <label for="name">Name</label>
         <small>Este campo é apenas leitura</small>
-        <input id="name_1" data-validate="text" type="text" name="name" readonly value="Maria Hipotenusa da Silva">
-        <label for="lg">.lg</label>
-        <input class="lg" id="lg" type="text" name="lg" value="Este é um input Largo">
-
+        <input id="name" type="text" name="name" data-validate="text" readonly value="Maria Hipotenusa da Silva">
         <label for="cpf">CPF</label>
         <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
         <footer class="btn-group">
@@ -90,17 +95,17 @@
       </div>
       <div class="code-block html">
         <code>
-          <span class="el">&lt;</span>form
+          <span class="el">&lt</span>form
           <span class="attr">class</span><span class="el">=</span><span class="value">"gt-form-inline"</span>
           <span class="attr">action</span><span class="el">=</span><span class="value">"myAction"</span>
-          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt;</span>
+          <span class="attr">method</span><span class="el">=</span><span class="value">"post"</span><span class="el">&gt</span>
           <span class="tx">...</span>
-          <span class="el">&lt;/</span>form<span class="el">&gt;</span>
+          <span class="el">&lt/</span>form<span class="el">&gt</span>
         </code>
       </div>
       <form class="gt-form-inline" action="." method="post">
-        <label for="name_2">Name</label>
-        <input id="name_2" type="text" name="name" data-validate="text" readonly value="Maria Hipotenusa da Silva">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" data-validate="text" readonly value="Maria Hipotenusa da Silva">
         <label for="cpf">CPF</label>
         <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
         <footer class="btn-group">
@@ -116,15 +121,15 @@
       </p>
       <form class="gt-form full" action="index.html" method="post">
         <h2>:focus, <code>.has-focus</code></h2>
-        <input class="field has-focus full" type="text" name="focus" placeholder="Esta é a visualização de um input:focus">
+        <input class="field has-focus full" type="text" name="name" placeholder="Esta é a visualização de um input:focus">
         <h2><code>.has-error</code></h2>
-        <input class="field has-error full" type="text" name="error" placeholder="Esta é a visualização de um input com erro">
+        <input class="field has-error full" type="text" name="name" placeholder="Esta é a visualização de um input com erro">
         <h2><code>.has-warning</code></h2>
-        <input class="field has-warning full" type="text" name="warning" placeholder="Esta é a visualização de um input com warning">
+        <input class="field has-warning full" type="text" name="name" placeholder="Esta é a visualização de um input com warning">
         <h2>disabled</h2>
-        <input type="text" name="disabled" value="Este input está desabilitado" disabled>
+        <input type="text" name="name" value="Este input está desabilitado" disabled>
         <h2>readonly</h2>
-        <input type="text" name="readonly" value="Este input é de apenas leitura" readonly>
+        <input type="text" name="name" value="Este input é de apenas leitura" readonly>
       </form>
     </section>
     <section>
@@ -136,10 +141,10 @@
         </ul>
       </div>
       <form class="gt-form" action="index.html" method="post">
-        <label for="input_a">Input</label>
-        <input id="input_a" type="text" name="name" value="">
-        <label for="select_a">Select</label>
-        <select id="select_a">
+        <label for="text">Input</label>
+        <input id="text" type="text" name="name" value="">
+        <label for="select">Select</label>
+        <select id="select">
           <option value="option">Teste</option>
         </select>
         <label for="selectMultiple">Select Multiple</label>
@@ -153,16 +158,16 @@
         </select>
         <div class="vertical-list">
           <label for="radio">
-            <input type="radio" name="radio" value="">
+            <input type="radio" name="name" value="">
             Radio
           </label>
           <label for="checkbox">
-            <input id="checkbox" type="checkbox" name="checkbox" value="">
+            <input id="checkbox" type="checkbox" name="name" value="">
             Checkbox
           </label>
         </div>
         <label for="textarea">Textarea</label>
-        <textarea id="textarea" name="textarea" rows="4"></textarea>
+        <textarea id="textarea" name="name" rows="4"></textarea>
       </form>
     </section>
     <section>
@@ -172,9 +177,9 @@
       </p>
       <div class="code-block html">
         <code>
-          <span class="el">&lt;</span>input
+          <span class="el">&lt</span>input
           <span class="attr">class</span><span class="el">=</span><span class="value">"field"</span>
-          <span class="attr">type</span><span class="el">=</span><span class="value">"text"</span><span class="el">&gt;</span>
+          <span class="attr">type</span><span class="el">=</span><span class="value">"text"</span><span class="el">&gt</span>
         </code>
       </div>
       <label for="free">Free Input</label>
@@ -199,34 +204,29 @@
         <p>
           Formata e valida CPF.
         </p>
-        <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00" maxlength="14">
+        <input id="cpf" type="text" name="cpf" data-validate="cpf" placeholder="000.000.000-00">
         <h3>CNPJ</h3>
         <p>
           Formata e valida CNPJ.
         </p>
         <input id="cnpj" type="text" name="cnpj" data-validate="cnpj" placeholder="00.000.000/0000-00">
-        <h3>brPhone</h3>
-        <label for="brPhone">Formata e valida telefones e celulares brasileiros</label>
-        <input type="text" data-validate="brPhone" name="brPhone" placeholder="(00) 0000-0000">
-        <h3>cep</h3>
-        <label for="cep">Formata CEP brasileiro. Para validar, recomendamos o VIACEP.</label>
-        <input type="text" data-validate="cep" name="cep" placeholder="44000-000">
-        <h3>date</h3>
-        <label for="date">Formata e valida datas (dd/mm/yyyy)</label>
-        <input type="text" data-validate="date" name="date" placeholder="19/08/1996">
-
         <h3>num</h3>
         <p>Aceita apenas algarismos (0-9).</p>
         <input id="age" type="text" name="age" data-validate="num" placeholder="0123456789">
         <h3>text</h3>
         <p>Aceita apenas letras, espaço e apóstrofo. Pensado para campos de 'nome completo' e afins.</p>
-        <input id="name_3" type="text" name="name" placeholder="José Cateto Oposto" data-validate="text">
+        <input id="name" type="text" name="name" data-validate="text" placeholder="José Cateto Oposto">
+        <h3>email</h3>
+        <p>
+          Aceita apenas texto no formato de email.
+        </p>
+        <input id="email" type="email" name="email" data-validate='email'>
       </form>
       <div class="code-block html">
         <code>
-          <span class="el">&lt;</span>input
+          <span class="el">&lt</span>input
           <span class="attr">type</span><span class="el">=</span><span class="value">"text"</span>
-          <span class="attr">data-validate</span><span class="el">=</span><span class="value">"cpf"</span><span class="el">&gt;</span>
+          <span class="attr">data-validate</span><span class="el">=</span><span class="value">"cpf"</span><span class="el">&gt</span>
         </code>
       </div>
     </section>
@@ -255,7 +255,7 @@
       </div>
       <div class="col">
         <p>
-          Versão v3.0.0
+          Versão v2.2.2
         </p>
       </div>
     </footer>
