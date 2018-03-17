@@ -22,14 +22,22 @@
       </label>
       <nav>
         <ul>
-          <li><a href=".">Como começar</a></li>
-          <li><a href="layouts">Layouts</a></li>
-          <li><a href="components">Componentes</a></li>
-          <li><a href="forms">Formulários</a></li>
-          <li class="active"><a href="helpers">Auxiliares</a></li>
-          <li><a href="flex">Flex Box</a></li>
-          <li><a href="grid">Grid System</a></li>
-          <li><a href="hotsite" target="_blank">Exemplo</a></li>
+          <a href="."><li>Como começar</li></a>
+          <a href="layouts"><li>Layouts</li></a>
+          <a href="components"><li>Componentes</li></a>
+          <a href="forms"><li>Formulários</li></a>
+          <a href="helpers"><li class="active">Auxiliares</li></a>
+          <a href="flex"><li>Flex Box</li></a>
+          <a href="grid"><li>Grid System</li></a>
+          <li class="hxs dropdown-right">
+            <span>Exemplos</span>
+            <ul>
+              <a href="hotsite" target="_blank"><li>WebSite</li></a>
+              <a href="panel" target="_blank"><li>Painel</li></a>
+            </ul>
+          </li>
+          <a class="voxs" href="hotsite" target="_blank"><li>Exemplo: WebSite</li></a>
+          <a class="voxs" href="panel" target="_blank"><li>Exemplo: Painel</li></a>
         </ul>
       </nav>
     </header>
@@ -46,22 +54,24 @@
     <section>
       <h1>Flutuadores</h1>
       <p>
-        Use as classes <code>left</code> e <code>right</code> para dar um <i>quick float</i> em um elemento. <code>!important</code> é aplicado.
+        Use as classes <code>left</code> e <code>right</code> para da um <i>quick float</i> em um elemento. <code>!important</code> é aplicado.
       </p>
       <div class="content-align fix-height success padding">
         <button class="btn left" type="button" name="button">Left</button>
         <button class="btn right" type="button" name="button">Right</button>
       </div>
-      <h2>Corretor de altura</h2>
+    </section>
+    <section>
+      <h1>Corretor de altura</h1>
       <p>
         Quando usamos elementos flutuantes, o normal é que o elemento pai "se esqueça" dos filhos, e deixe de crescer em altura. Pois bem, para solucionar esse problema, trouxemos a classe <code>.fix-height</code>.
       </p>
       <div class="code-block html">
         <pre>
-<code><span class="el">&lt;</span>div<span class="attr"> class</span><span class="el">=</span><span class="value">"content-align fix-height success"</span><span class="el">&gt;</span></code>
-  <code><span class="el">&lt;</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn left"</span><span class="el">&gt;</span><span class="tx">Left</span><span class="el">&lt;</span>/button<span class="el">&gt;</span></code>
-  <code><span class="el">&lt;</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn right</span><span class="el">&gt;</span><span class="tx">Right</span><span class="el">&lt;</span>/button<span class="el">&gt;</span></code>
-<code><span class="el">&lt;</span>/div<span class="el">&gt;</span></code>
+<code><span class="el">&lt</span>div<span class="attr"> class</span><span class="el">=</span><span class="value">"content-align fix-height success"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn left"</span><span class="el">&gt</span><span class="tx">Left</span><span class="el">&lt</span>/button<span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>button <span class="attr">class</span><span class="el">=</span><span class="value">"btn right</span><span class="el">&gt</span><span class="tx">Right</span><span class="el">&lt</span>/button<span class="el">&gt</span></code>
+<code><span class="el">&lt</span>/div<span class="el">&gt</span></code>
         </pre>
       </div>
     </section>
@@ -71,13 +81,12 @@
         Com a classe <code>.center</code>, definimos que um elemento é um bloco (<code>display: block</code>), e colocamos ele no centro através de <code>margin</code>.
       </p>
       <div class="code-block html">
-        <code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"center danger"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt;</span>.....<span class="el">&lt;/</span>div<span class="el">&gt;</span></code>
+        <code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"center danger"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt</span>.....<span class="el">&lt/</span>div<span class="el">&gt</span></code>
       </div>
       <div class="center danger" style="width: 50px">.....</div>
     </section>
     <section>
-      <h1>Espaçamento</h1>
-      <h2>Padding</h2>
+      <h1>Padding</h1>
       <p>
         Vai ver, tudo o que aquele elemento precisa é de um <code>.padding</code> padrão. :P
       </p>
@@ -88,55 +97,21 @@
         <p>
           Se você quiser apenas padding <strong>vertical</strong>, utilize <code>.padding-tb</code>.
         </p>
-        <p>Também são válidos: <code>padding-l, padding-r, padding-t, padding-b</code>.</p>
       </div>
       <div class="code-block html">
-        <code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"success padding"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt;</span>.....<span class="el">&lt;/</span>div<span class="el">&gt;</span></code>
+        <code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"success padding"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt</span>.....<span class="el">&lt/</span>div<span class="el">&gt</span></code>
       </div>
       <div class="content-align">
         <div class="success padding" style="width: 50px">.....</div>
         <div class="danger padding-lr" style="width: 50px">.....</div>
         <div class="warning padding-tb" style="width: 50px">!!!!!!!!!!!!</div>
       </div>
-      <h2>Margin</h2>
-      <p>
-        Vai ver, tudo o que aquele elemento precisa é de um <code>.margin</code> padrão. :P
-      </p>
-      <div class="inform info">
-        <p>
-          Se você quiser apenas margin <strong>horizontal</strong>, utilize <code>.margin-lr</code>.
-        </p>
-        <p>
-          Se você quiser apenas margin <strong>vertical</strong>, utilize <code>.margin-tb</code>.
-        </p>
-        <p>Também são válidos: <code>margin-l, margin-r, margin-t, margin-b</code>.</p>
-      </div>
-      <div class="code-block html">
-        <code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"success margin"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"width: 50px"</span><span class="el">&gt;</span>.....<span class="el">&lt;/</span>div<span class="el">&gt;</span></code>
-      </div>
-      <div class="content-align">
-        <div class="success margin" style="width: 50px">.....</div>
-        <div class="danger margin-lr" style="width: 50px">.....</div>
-        <div class="warning margin-tb" style="width: 50px">!!!!!!!!!!!!</div>
-      </div>
-      <h2>Ou...</h2>
-      <p>Vai ver aquele elemento não precisa nem de padding, nem de margin. Aí você utiliza as classes <code>.no-padding</code> ou <code>.no-margin</code>.</p>
     </section>
     <section>
       <h1>Alinhador de conteúdo</h1>
       <p>
         A classe <code>.content-align</code> alinha todo o conteúdo diretamente ligado a ela (<code>></code>) horizontalmente e verticamente. Provoca <code>display: inline-block</code>.
       </p>
-    </section>
-    <section>
-      <h1>Bordas</h1>
-      <p>Bom, você pode querer aplicar uma borda discreta. Se for isso, utilize a classe <code>.border</code>.</p>
-      <div class="padding border">
-      </div>
-    </section>
-    <section>
-      <h1>Modificadores de tamanho</h1>
-      <p>Bom, essas classes vão tentar ampliar ou reduzir as coisas, mas tome cuidado, porque elas só trabalham com padding e font-size, o resto é com você. <code>.sm</code>, <code>.lg</code>.</p>
     </section>
     <section>
       <h1>Alinhadores de texto</h1>
@@ -154,11 +129,11 @@
       </p>
       <div class="code-block html">
         <pre>
-<code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"inform"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"max-width: 300px"</span><span class="el">&gt;</span></code>
-  <code><span class="el">&lt;</span>p <span class="attr">class</span><span class="el">=</span><span class="value">"truncate"</span><span class="el">&gt;</span></code>
+<code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"inform"</span> <span class="attr">style</span><span class="el">=</span><span class="value">"max-width: 300px"</span><span class="el">&gt</span></code>
+  <code><span class="el">&lt</span>p <span class="attr">class</span><span class="el">=</span><span class="value">"truncate"</span><span class="el">&gt</span></code>
     <code class="tx">Este é um texto muito longo e, por isso, deve ser truncado.</code>
-  <code><span class="el">&lt;</span>/p<span class="el">&gt;</span></code>
-<code><span class="el">&lt;</span>/div<span class="el">&gt;</span></code>
+  <code><span class="el">&lt</span>/p<span class="el">&gt</span></code>
+<code><span class="el">&lt</span>/div<span class="el">&gt</span></code>
         </pre>
       </div>
       <h2>Resultado</h2>
@@ -166,13 +141,6 @@
         <p class="truncate">
           Este é um texto muito longo e, por isso, deve ser truncado.
         </p>
-      </div>
-    </section>
-    <section>
-      <h1>Hover</h1>
-      <p>Se quiser um efeito rápido de hover: <code>.hoverable</code>.</p>
-      <div class="padding border hoverable">
-
       </div>
     </section>
     <footer class="dark flex-box">
@@ -200,7 +168,7 @@
       </div>
       <div class="col">
         <p>
-          Versão v3.0.0
+          Versão v2.2.2
         </p>
       </div>
     </footer>

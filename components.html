@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="assets/img/ico.png">
     <title>GainTime</title>
   </head>
-  <body class="website">
-    <header class="gt-top-menu sm-left">
+  <body>
+    <header class="gt-top-menu sm-left fixed">
       <a href=".">
         <img src="assets/img/gaintime.png" alt="GainTime" title="GainTime" />
       </a>
@@ -22,510 +22,654 @@
       </label>
       <nav>
         <ul>
-          <a href="."><li>Como começar</li></a>
-          <a href="layouts"><li>Layouts</li></a>
-          <a href="components"><li class="active">Componentes</li></a>
-          <a href="forms"><li>Formulários</li></a>
-          <a href="helpers"><li>Auxiliares</li></a>
-          <a href="flex"><li>Flex Box</li></a>
-          <a href="grid"><li>Grid System</li></a>
-          <li class="hxs dropdown-right">
-            <span>Exemplos</span>
-            <ul>
-              <a href="hotsite" target="_blank"><li>WebSite</li></a>
-              <a href="panel" target="_blank"><li>Painel</li></a>
-            </ul>
-          </li>
-          <a class="voxs" href="hotsite" target="_blank"><li>Exemplo: WebSite</li></a>
-          <a class="voxs" href="panel" target="_blank"><li>Exemplo: Painel</li></a>
+          <li><a href=".">Como começar</a></li>
+          <li><a href="layouts">Layouts</a></li>
+          <li class="active"><a href="components">Componentes</a></li>
+          <li><a href="forms">Formulários</a></li>
+          <li><a href="helpers">Auxiliares</a></li>
+          <li><a href="flex">Flex Box</a></li>
+          <li><a href="grid">Grid System</a></li>
+          <li><a href="hotsite" target="_blank">Exemplo</a></li>
         </ul>
       </nav>
     </header>
-    <section class="text-center" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
-      <h1>Componentes</h1>
-      <p>
-        Trouxemos um singelo pacote de componentes independentes e reutilizáveis para facilitar o seu trabalho. :)
-      </p>
-      <span class="tag success">GA</span>
-      <span class="tag danger">IN</span>
-      <span class="tag warning">TI</span>
-      <span class="tag info">ME</span>
-    </section>
-    <section>
-      <h1>Modals</h1>
-      <p>
-        Modals são caixas de diálogo que sobrepõem a página de maneira inteligente e agradável. São muito utilizadas para formulários ou informações rápidas.
-      </p>
-      <div class="inform warning">
-        <ul>
-          <li>
-            Só é possível abrir um modal por vez.
-          </li>
-          <li>
-            Modals fecham quando a tecla <code>esc</code> é pressionada.
-          </li>
-        </ul>
-      </div>
-      <div class="">
-        <button class="btn success" type="button" name="button" data-modal="first-modal">Clique-me, sou um modal.</button>
-        <div class="gt-modal">
-          <div  id="first-modal" class="modal">
-            <button class="modal-close">×</button>
-            <div class="modal-header">
-              <h1>Hey, laddys</h1>
-            </div>
-            <div class="modal-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button class="btn danger" type="button" name="button" data-modal="second-modal">Clique-me, sou um GRANDE modal.</button>
-        <div class="gt-modal">
-          <div  id="second-modal" class="modal">
-            <button class="modal-close">×</button>
-            <div class="modal-header">
-              <h1>Hey, laddys</h1>
-            </div>
-            <div class="modal-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
+    <div class="row false-gutter first  ">
+      <div style="height: calc(100% - 60px)" class="white sm-2 fixed scrollable-y border padding-t hxs">
+        <div class="vertical-list-table">
+          <a class="btn" href="#modals">Modals</a>
+          <a class="btn" href="#buttons">Botões</a>
+          <a class="btn" href="#actions">Botões de ação</a>
+          <a class="btn" href="#dropdowns">Dropdowns</a>
+          <a class="btn" href="#tags">Tags</a>
+          <a class="btn" href="#badges">Badges</a>
+          <a class="btn" href="#informations">Informações</a>
+          <a class="btn" href="#messages">Mensagens</a>
+          <a class="btn" href="#bars">Barras de progresso</a>
+          <a class="btn" href="#tooltips">Tooltips</a>
+          <a class="btn" href="#cards">Cards</a>
+          <a class="btn" href="#verticals">Listas verticais</a>
         </div>
       </div>
-      <div class="code-block html">
-<pre>
+      <div class="xs-12 sm-10 no-padding right">
+        <section class="text-center gt-section" style="color: #FFF; background:#2e7bcf url('assets/img/bg.jpg')">
+          <h1>Componentes</h1>
+          <p>
+            Trouxemos um singelo pacote de componentes independentes e reutilizáveis para facilitar o seu trabalho. :)
+          </p>
+          <span class="tag success">GA</span>
+          <span class="tag danger">IN</span>
+          <span class="tag warning">TI</span>
+          <span class="tag info">ME</span>
+        </section>
+
+        <section id="modals" class="gt-section">
+          <h1>Modals</h1>
+          <p>
+            Modals são caixas de diálogo que sobrepõem a página de maneira inteligente e agradável. São muito utilizadas para formulários ou informações rápidas.
+          </p>
+          <div class="inform warning">
+            <ul>
+              <li>
+                Só é possível abrir um modal por vez.
+              </li>
+              <li>
+                Modals fecham quando a tecla <code>esc</code> é pressionada.
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <button class="btn success" type="button" name="button" data-modal="first-modal">Clique-me, sou um modal.</button>
+            <div class="gt-modal">
+              <div id="first-modal" class="modal">
+                <button class="modal-close">×</button>
+                <div class="modal-header">
+                  <h1>Hey, laddys</h1>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <div class="right">
+                    <button type="button" name="button" class="modal-close btn danger">Cancelar</button>
+                    <button type="button" name="button" class="modal-close btn success">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn danger" type="button" name="button" data-modal="second-modal">Clique-me, sou um GRANDE modal.</button>
+            <div class="gt-modal">
+              <div  id="second-modal" class="modal">
+                <button class="modal-close">×</button>
+                <div class="modal-header">
+                  <h1>Hey, laddys</h1>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="code-block html">
+            <pre>
 <code>
-  <span class="tx">&lt!-- Um elemento com o atributo data-modal dispara um modal que possui o id informado no data-modal. --&gt</span>
+  <span class="tx">&lt;!-- Um elemento com o atributo data-modal dispara um modal que possui o id informado no data-modal. --&gt;</span>
 </code>
 <code>
-  <span class="el">&lt</span>button
-  <span class="attr">class</span><span class="el">=</span><span class="value">"btn info"</span> <span class="attr">data-modal</span><span class="el">=</span><span class="value">"myModal"</span><span class="el">&gt</span><span class="tx">My Modal</span><span class="el">&lt/</span>button<span class="el">&gt</span>
+  <span class="el">&lt;</span>button
+  <span class="attr">class</span><span class="el">=</span><span class="value">"btn info"</span> <span class="attr">data-modal</span><span class="el">=</span><span class="value">"myModal"</span><span class="el">&gt;</span><span class="tx">My Modal</span><span class="el">&lt;/</span>button<span class="el">&gt;</span>
 </code>
 
 <code>
-  <span class="el">&lt</span>div
-  <span class="attr">class</span><span class="el">=</span><span class="value">"gt-modal"</span><span class="el">&gt</span>
+  <span class="el">&lt;</span>div
+  <span class="attr">class</span><span class="el">=</span><span class="value">"gt-modal"</span><span class="el">&gt;</span>
 </code>
   <code>
-    <span class="tx">&lt!-- Aqui você vai atribuir um id ao seu modal --&gt</span>
+    <span class="tx">&lt;!-- Aqui você vai atribuir um id ao seu modal --&gt;</span>
   </code>
   <code>
-    <span class="el">&lt</span>div
-    <span class="func">id</span><span class="el">=</span><span class="value">"myModal"</span> <span class="attr">class</span><span class="el">=</span><span class="value">"modal"</span><span class="el">&gt</span>
+    <span class="el">&lt;</span>div
+    <span class="func">id</span><span class="el">=</span><span class="value">"myModal"</span> <span class="attr">class</span><span class="el">=</span><span class="value">"modal"</span><span class="el">&gt;</span>
   </code>
     <code>
-      <span class="tx">&lt!-- Este botão é responsável por fechar o modal --&gt</span>
+      <span class="tx">&lt;!-- Este botão é responsável por fechar o modal --&gt;</span>
     </code>
     <code>
-      <span class="el">&lt</span>button
-      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-close"</span> <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span>×<span class="el">&lt/</span>button<span class="el">&gt</span>
+      <span class="el">&lt;</span>button
+      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-close"</span> <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt;</span>×<span class="el">&lt;/</span>button<span class="el">&gt;</span>
     </code>
     <code>
-      <span class="el">&lt</span>div
-      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-body"</span><span class="el">&gt</span>
+      <span class="el">&lt;</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"modal-body"</span><span class="el">&gt;</span>
     </code>
       <code>
-        <span class="tx">&lt!-- Digite o conteúdo do modal aqui --&gt</span>
+        <span class="tx">&lt;!-- Digite o conteúdo do modal aqui --&gt;</span>
       </code>
     <code>
-      <span class="el">&lt/</span>div<span class="el">&gt</span>
+      <span class="el">&lt;/</span>div<span class="el">&gt;</span>
     </code>
   <code>
-    <span class="el">&lt/</span>div<span class="el">&gt</span>
+    <span class="el">&lt;/</span>div<span class="el">&gt;</span>
   </code>
 <code>
-  <span class="el">&lt/</span>div<span class="el">&gt</span>
+  <span class="el">&lt;/</span>div<span class="el">&gt;</span>
 </code>
-</pre>
-      </div>
-    </section>
-    <section>
-      <h2>Botões</h2>
-      <p>
-        Recomendamos que as classes para botão sejam utilizadas preferencialmente nos elementos <code>button</code> e <code>a</code>.
-      </p>
-      <div class="inform info">
-        <p>
-          Você pode utilizar as classes de botão em outros elementos, mas não garantimos a aparência nem a acessibilidade do uso.
-        </p>
-      </div>
-      <h3>.btn</h3>
-      <p>
-        A classe básica para botões é a <code>.btn</code>. Ela pode ser utilizada junto com classes auxiliares para gerar cores e detalhes diferentes.
-      </p>
-      <div class="content-align">
-        <button class="btn" type="button" name="button">Basic</button>
-        <button class="btn success" type="button" name="button">Success</button>
-        <button class="btn danger" type="button" name="button">Danger</button>
-        <button class="btn warning" type="button" name="button">Warning</button>
-        <button class="btn info" type="button" name="button">Info</button>
-        <button class="btn danger outline" type="button" name="button">Outline</button>
-        <button class="btn success clean" type="button" name="button">Clean</button>
-        <a class="btn" href="#">LINK</a>
-      </div>
-      <div class="code-block html">
-        <code class="tx">&lt!-- Botão básico. --&gt</code>
-        <code>
-            <span class="el">&lt</span>button
-            <span class="attr"> class</span><span class="el">=</span><span class="value">"btn" </span>
-            <span class="attr">type</span><span class="el">=</span><span class="value">"button" </span>
-            <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span><span class="tx">Basic</span><span class="el">&lt/</span>button<span class="el">&gt</span>
-        </code>
-
-        <br>
-        <code class="tx">&lt!-- Estilo padrão de botão, que pode ser mesclado com cores que dão indicação de emoção. --&gt</code>
-        <code>
-          <span class="el">&lt</span>button
-          <span class="attr">class</span><span class="el">=</span><span class="value">"btn success"</span>
-          <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
-          <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span><span class="tx">Success</span><span class="el">&lt/</span>button<span class="el">&gt</span>
-        </code>
-
-        <br>
-        <code class="tx">&lt!-- Para usar o estilo outline em um botão, apenas adicione a classe .outline. --&gt</code>
-
-        <code>
-          <span class="el">&lt</span>button
-          <span class="attr">class</span><span class="el">=</span><span class="value">"btn danger outline"</span>
-          <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
-          <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span><span class="tx">Outline</span><span class="el">&lt/</span>button<span class="el">&gt</span>
-        </code>
-
-        <br>
-        <code class="tx">&lt!-- Para usar o estilo clean em um botão, apenas adicione a classe .clean. --&gt</code>
-        <code>
-          <span class="el">&lt</span>button
-          <span class="attr">class</span><span class="el">=</span><span class="value">"btn success clean"</span>
-          <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
-          <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt</span><span class="tx">Clean</span><span class="el">&lt/</span>button<span class="el">&gt</span>
-        </code>
-      </div>
-      <div class="inform warning">
-        As cores oferecem apenas uma indicação visual de emoção, que não será transmitida para os utilizadores de tecnologia assistiva – tais como leitores de tela. Garanta que as informações indicadas pela cor sejam óbvias a partir do conteúdo em si (o texto visível do botão), ou que esteja incluída através de meios alternativos.
-      </div>
-    </section>
-    <section>
-      <h2>.action</h2>
-      <p>
-        As <code>.action</code> são botões. Contudo, foram criadas para escopos com espaço reduzido, como uma posição numa tabela, ou o cabeçalho de um cartão. São excelentes para serem aplicadas com ícones. Deve ser utilizada em tags <code>a</code> e <code>button</code>.
-      </p>
-      <div class="content-align">
-        <a class="action">Basic</a>
-        <a class="action warning">Edit</a>
-        <a href="#" class="action danger">Delete</a>
-        <a href="#" class="action info">Show</a>
-        <a class="action warning outline">Edit</a>
-        <a href="#" class="action danger outline">Delete</a>
-        <a href="#" class="action info outline">Show</a>
-        <a class="action warning clean">Edit</a>
-        <a href="#" class="action danger clean">Delete</a>
-        <a href="#" class="action info clean">Show</a>
-      </div>
-      <!-- <h3>Exemplo:</h3> -->
-      <table class="gt-table">
-        <thead>
-          <tr>
-            <td>
-              Nome
-            </td>
-            <td>
-              E-mail
-            </td>
-            <td>
-              Ações
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              JP Rodrigues
-            </td>
-            <td>
-              email@example.com
-            </td>
-            <td>
-              <a class="action warning">Edit</a>
-              <a href="#" class="action danger">Delete</a>
-              <a href="#" class="action info">Show</a>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot >
-          <tr>
-            <td colspan="3">Exemplo de utilização;</td>
-          </tr>
-        </tfoot>
-      </table>
-      <div class="code-block html">
-        <code class="tx">&lt!-- Exemplo de .action. --&gt</code>
-        <code>
-          <span class="el">&lt</span>a
-          <span class="attr">class</span><span class="el">=</span><span class="value">"action info"</span>
-          <span class="attr">href</span><span class="el">=</span><span class="value">"product/255"</span><span class="el">&gt</span><span class="tx">Detalhes</span><span class="el">&lt/</span>a<span class="el">&gt</span>
-        </code>
-      </div>
-    </section>
-    <section>
-      <h2>Dropdowns & Dropups</h2>
-      <p>
-        Um dropdown/up é um menu contextual, que deve conter uma lista de links. É dependente do GainTime JS.
-      </p>
-      <p>
-        Recomendamos que você utlize div para colocar a classe dropdown ou a classe dropdup, e que dentro de <code>div</code> você tenha um elemento que descreva o contexto, e um elemento do tipo lista não ordenada (<code>ul</code>).
-      </p>
-      <div class="inform info">
-        <p>
-          Dropdowns não são botões, mas podem ser tão estilosos quanto eles.
-        </p>
-      </div>
-      <div>
-        <h3>Classes:</h3>
-        <ul>
-          <li><strong><code>.dropdown, .dropdown-left</code></strong>: Lista originada da baixa esquerda.</li>
-          <li><strong><code>.dropdown-right</code></strong>: Lista originada da baixa direita.</li>
-          <li><strong><code>.dropup, .dropup-left</code></strong>: Lista originada da alta esquerda.</li>
-          <li><strong><code>.dropup-right</code></strong>: Lista originada da alta direita.</li>
-        </ul>
-      </div>
-      <div class="content-align">
-        <div class="dropdown">
-          <span>Basic</span>
-          <ul>
-            <li>A</li>
-          </ul>
-        </div>
-        <div class="btn dropdown info">
-          <span>DOWN-LEFT</span>
-          <ul>
-            <li>A</li>
-          </ul>
-        </div>
-        <div class="btn dropdown-right danger">
-          <span>DOWN-RIGHT</span>
-          <ul>
-            <li>A</li>
-            <li>B</li>
-          </ul>
-        </div>
-        <div class="btn dropup success clean">
-          <span>UP-LEFT</span>
-          <ul>
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-          </ul>
-        </div>
-        <div class="btn dropup-right warning outline">
-          <span>UP-RIGHT</span>
-          <ul>
-            <li>C</li>
-            <li>B</li>
-            <li>A</li>
-          </ul>
-        </div>
-        <div class="dropdown-right">
-          <img style="height: 50px" src="assets/img/wm.png" alt="Black Power" />
-          <ul>
-            <li>OI TUDO BEM?</li>
-          </ul>
-        </div>
-      </div>
-      <div class="code-block html">
-        <code class="tx">&lt!-- Exemplo de .dropdown estilizado como um .btn, com lista alinhada à direita. --&gt</code>
-        <pre>
-<code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"btn dropdown-right danger"</span><span class="el">&gt</span></code>
-  <code><span class="el">&lt</span>span<span class="el">&gt</span><span class="tx">DOWN RIGHT</span><span class="el">&lt</span>/span<span class="el">&gt</span></code>
-  <code><span class="el">&lt</span>ul<span class="el">&gt</span></code>
-    <code><span class="el">&lt</span>li<span class="el">&gt</span><span class="tx">A</span><span class="el">&lt</span>/li<span class="el">&gt</span></code>
-    <code><span class="el">&lt</span>li<span class="el">&gt</span><span class="tx">B</span><span class="el">&lt</span>/li<span class="el">&gt</span></code>
-  <code><span class="el">&lt</span>/ul<span class="el">&gt</span></code>
-<code><span class="el">&lt</span>/div<span class="el">&gt</span></code>
-        </pre>
-      </div>
-    </section>
-    <section>
-      <h1>Tags</h1>
-      <p>
-        As <code>.tag</code> são rótulos de ênfase visual para serem adicionadas preferencialmente em <code>span</code>, em phrase tags (ex: <code>strong</code>, <code>em</code>, <code>code</code>, <code>samp</code>, <code>kbd</code>, <code>var</code>), ou em formatting tags (ex: <code>b</code>, <code>i</code>, <code>u</code>, <code>strike</code>).
-      </p>
-      <div class="">
-        <h4>Aluno relata sobre prova fácil de cálculo. <span class="tag danger">BUG</span></h4>
-        <i class="tag info outline">OLA</i>
-        <span class="tag danger clean">OLA</span>
-        <span class="tag warning">OLA</span>
-        <span class="tag success">OLA</span>
-        <span class="tag">OLA</span>
-      </div>
-      <div class="code-block html">
-        <code><span class="el">&lt</span>h4<span class="el">&gt</span><span class="tx">Exemplo de utilização da classe</span> <span class="el">&lt</span>span <span class="attr">class</span><span class="el">=</span><span class="value">"tag"</span><span class="el">&gt</span><span class="tx">.tag</span><span class="el">&lt/</span>span<span class="el">&gt</span><span class="el">&lt/</span>h4<span class="el">&gt</span></code>
-      </div>
-    </section>
-    <section>
-      <h1>Badges</h1>
-      <p>
-        Os <code>.badge</code> são uma boa opção para contadores de notificações e afins. Eles dão um realce arredondado em elementos do tipo <code>span</code>.
-      </p>
-      <div class="content-align">
-        <a href="#">Inbox <span class="badge">42</span></a>
-        <button class="btn" type="button" name="button">Basic<span class="badge">42</span></button>
-        <button class="btn dark" type="button" name="button">Success<span class="badge">42</span></button>
-        <span class="tag danger"><span class="badge">19</span></span>
-        <span class="tag outline warning"><span class="badge">08</span></span>
-        <button>Exemplo<span class="badge">96</span></button>
-      </div>
-
-      <div class="code-block html">
-        <code><span class="el">&lt</span>button<span class="el">&gt</span><span class="tx">Exemplo</span><span class="el">&lt</span>span <span class="attr">class</span><span class="el">=</span><span class="value">"badge"</span><span class="el">&gt</span><span class="tx">2</span><span class="el">&lt/</span>span<span class="el">&gt</span><span class="el">&lt/</span>button<span class="el">&gt</span></code>
-      </div>
-    </section>
-    <section>
-      <h1>Informações</h1>
-      <p>
-        A classe de informação <code>.inform</code> foi construida para criar caixas de texto com destaque. Muito útil para textos de alerta ou aviso. Deve ser adicionada ao elemento <code>div</code>, preferencialmente, e unida a <code>.warning</code>, <code>.info</code>, <code>.success</code> ou <code>.danger</code>.
-      </p>
-      <div class="inform warning">
-        <h2>Atenção!</h2>
-        <p>
-          Este é um típico <code>.inform</code>.
-        </p>
-        <p>
-          No <code>.inform</code> você pode ficar a vontade para usar tags de texto. :)
-        </p>
-      </div>
-
-      <div class="code-block html">
-        <code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"inform"</span><span class="el">&gt</code>
-        <code><span class="el">&lt/</span>div<span class="el">&gt</span></code>
-      </div>
-    </section>
-    <section>
-      <h1>Mensagens</h1>
-      <p>
-        As mensagens <code>.msg</code> são semelhantes às informações, porém são feitas para serem temporárias e, por isso, devem ser acompanhadas por um botão  <code>type="button" class="close"</code> que vai fazer com que a <code>.msg</code> seja removida do DOM.
-      </p>
-      <p>
-        Na <code>.msg</code> você pode ficar a vontade para usar tags de texto. :)
-      </p>
-      <p>
-        A função de fechar a mensagem é totalmente dependente do GainTime JS.
-      </p>
-      <div class="msg success">
-        <button type="button" class="close"></button>
-        <p>
-          Opa! OOOOOPAAAAAA!
-        </p>
-      </div>
-      <div class="msg danger">
-        <button type="button" class="close"></button>
-        <p>
-          Opa! OOOOOPAAAAAA!
-        </p>
-      </div>
-      <div class="msg warning">
-        <button type="button" class="close"></button>
-        <p>
-          Opa! OOOOOPAAAAAA!
-        </p>
-      </div>
-      <div class="msg info">
-        <button type="button" class="close"></button>
-        <p>
-          Opa! OOOOOPAAAAAA!
-        </p>
-      </div>
-      <div class="code-block html">
-        <code class="tx">&lt!-- Exemplo de .dropdown estilizado como um .btn, com lista alinhada à direita. --&gt</code>
-        <pre>
-<code><span class="el">&lt</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"msg success"</span><span class="el">&gt</span></code>
-  <code><span class="el">&lt</span>button <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span> <span class="attr">class</span><span class="el">=</span><span class="value">"close"</span><span class="el">&gt</span><span class="tx"></span><span class="el">&lt/</span>button<span class="el">&gt</span></code>
-  <code><span class="el">&lt</span>p<span class="el">&gt</span><span class="tx">Exemplo de mensagem temporária.</span><span class="el">&lt/</span>p<span class="el">&gt</span></code>
-<code><span class="el">&lt/</span>div<span class="el">&gt</span></code>
-        </pre>
-      </div>
-    </section>
-    <section>
-      <h1>Barra de progresso</h1>
-      <p>
-        As barras de progresso <code>.bar</code> são dependentes de HTML5 e GainTime JS. Elas possuem uma estrutura particular que precisa ser seguida.
-      </p>
-      <p>
-        A estrutura básica é a seguinte:
-      </p>
-      <div class="code-block html">
-        <code>
-          <span class="el">&lt</span>div
-          <span class="attr">class</span><span class="el">=</span><span class="value">"bar"</span>
-          <span class="attr">data-percentage</span><span class="el">=</span><span class="value">"20%"</span>
-          <span class="attr">data-color</span><span class="el">=</span><span class="value">"success"</span>
-          <span class="attr">data-tooltip</span><span class="el">=</span><span class="value">"Test"</span>
-          <span class="attr">data-text</span><span class="el">=</span><span class="value">"20% do total"<span class="el">&gt</span>
-        </code>
-      </div>
-      <p>
-        <strong>Atributos obrigatórios:</strong>
-      </p>
-      <ul>
-        <li><code>class="bar"</code> - Classe que ativa a barra de progresso.</li>
-        <li><code>data-percentage="x%"</code> - Atributo que determina o progresso.</li>
-      </ul>
-      <p>
-        <strong>Atributos opcionais:</strong>
-      </p>
-      <ul>
-        <li><code>class="bar"</code> - Classe que ativa a barra de progresso.</li>
-        <li><code>data-color=""</code> - Atributo que determina a cor do indicador de progresso. Variações: <code>.success</code>, <code>.warning</code>, <code>.danger</code>, <code>.info</code>. O padrão é <span class="tag" style="background-color: #2e7bcf; color: #FFF">#2e7bcf</span>, mas você pode criar a sua própria classe de cor e atribuir ao <code>data-color</code>.</li>
-        <li><code>data-tooltip=""</code> - Determina a mensagem que vai aparecer quando a barra estiver em <code>:hover</code>.</li>
-        <li><code>data-text=""</code> - Determina o texto que deve aparecer no indicador de progresso.</li>
-      </ul>
-      <div class="bar" data-percentage="20%" data-color="success" data-tooltip="Test" data-text="20% do total"></div>
-      <div class="bar" data-percentage="40%" data-color="warning" data-tooltip="40"></div>
-      <div class="bar" data-percentage="60%" data-color="danger" data-tooltip="60"></div>
-      <div class="bar" data-percentage="80%" data-color="info" data-tooltip="80"></div>
-      <div class="bar" data-percentage="100%" data-tooltip="100"></div>
-    </section>
-    <footer class="dark flex-box">
-      <div class="col">
-        <p>
-          <strong>GainTime</strong>, por <a href="https://github.com/jprodrigues70">JP Rodrigues</a>
-        </p>
-        <p>Código sob a licença <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.</p>
-        <a href="https://github.com/GainTime/gainTime" class="content-align">
-          <svg fill="#FFF" aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> <p>
-            GitHub
+            </pre>
+          </div>
+        </section>
+        <section id="buttons" class="gt-section">
+          <h2>Botões</h2>
+          <p>
+            Recomendamos que as classes para botão sejam utilizadas preferencialmente nos elementos <code>button</code> e <code>a</code>.
           </p>
-        </a>
-      </div>
-      <div class="col">
-        <p>
-          Contribua com o <a href="https://github.com/GainTime/gaintime-factory">GainTime</a>.
-        </p>
-        <p>
-          Faça <a href="https://github.com/GainTime/gaintime-factory/issues">report de erros</a>!
-        </p>
-        <p>
-          Faça <a href="https://github.com/GainTime/gaintime-factory/issues">sugestões</a>!
-        </p>
-      </div>
-      <div class="col">
-        <p>
-          Versão v2.2.2
-        </p>
-      </div>
-    </footer>
+          <div class="inform info">
+            <p>
+              Você pode utilizar as classes de botão em outros elementos, mas não garantimos a aparência nem a acessibilidade do uso.
+            </p>
+          </div>
+          <h3>.btn</h3>
+          <p>
+            A classe básica para botões é a <code>.btn</code>. Ela pode ser utilizada junto com classes auxiliares para gerar cores e detalhes diferentes.
+          </p>
+          <div class="content-align">
+            <button class="btn" type="button" name="button">Basic</button>
+            <button class="btn success" type="button" name="button">Success</button>
+            <button class="btn danger" type="button" name="button">Danger</button>
+            <button class="btn warning" type="button" name="button">Warning</button>
+            <button class="btn info" type="button" name="button">Info</button>
+            <button class="btn danger outline" type="button" name="button">Outline</button>
+            <button class="btn success clean" type="button" name="button">Clean</button>
+            <a class="btn" href="#">LINK</a>
+          </div>
+          <div class="content-align">
+            <button class="btn lg" type="button" name="button">.lg Button</button>
+            <button class="btn" type="button" name="button">Button</button>
+            <button class="btn sm" type="button" name="button">.sm Button</button>
+          </div>
+          <div class="code-block html">
+            <code class="tx">&lt;!-- Botão básico. --&gt;</code>
+            <code>
+              <span class="el">&lt;</span>button
+              <span class="attr"> class</span><span class="el">=</span><span class="value">"btn" </span>
+              <span class="attr">type</span><span class="el">=</span><span class="value">"button" </span>
+              <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt;</span><span class="tx">Basic</span><span class="el">&lt;/</span>button<span class="el">&gt;</span>
+            </code>
+
+            <br>
+            <code class="tx">&lt;!-- Estilo padrão de botão, que pode ser mesclado com cores que dão indicação de emoção. --&gt;</code>
+            <code>
+              <span class="el">&lt;</span>button
+              <span class="attr">class</span><span class="el">=</span><span class="value">"btn success"</span>
+              <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
+              <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt;</span><span class="tx">Success</span><span class="el">&lt;/</span>button<span class="el">&gt;</span>
+            </code>
+
+            <br>
+            <code class="tx">&lt;!-- Para usar o estilo outline em um botão, apenas adicione a classe .outline. --&gt;</code>
+
+            <code>
+              <span class="el">&lt;</span>button
+              <span class="attr">class</span><span class="el">=</span><span class="value">"btn danger outline"</span>
+              <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
+              <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt;</span><span class="tx">Outline</span><span class="el">&lt;/</span>button<span class="el">&gt;</span>
+            </code>
+
+            <br>
+            <code class="tx">&lt;!-- Para usar o estilo clean em um botão, apenas adicione a classe .clean. --&gt;</code>
+            <code>
+              <span class="el">&lt;</span>button
+              <span class="attr">class</span><span class="el">=</span><span class="value">"btn success clean"</span>
+              <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span>
+              <span class="attr">name</span><span class="el">=</span><span class="value">"button"</span><span class="el">&gt;</span><span class="tx">Clean</span><span class="el">&lt;/</span>button<span class="el">&gt;</span>
+            </code>
+          </div>
+          <div class="inform warning">
+            As cores oferecem apenas uma indicação visual de emoção, que não será transmitida para os utilizadores de tecnologia assistiva – tais como leitores de tela. Garanta que as informações indicadas pela cor sejam óbvias a partir do conteúdo em si (o texto visível do botão), ou que esteja incluída através de meios alternativos.
+          </div>
+        </section>
+        <section id="actions" class="gt-section">
+          <h2>.action</h2>
+          <p>
+            As <code>.action</code> são botões. Contudo, foram criadas para escopos com espaço reduzido, como uma posição numa tabela, ou o cabeçalho de um cartão. São excelentes para serem aplicadas com ícones. Deve ser utilizada em tags <code>a</code> e <code>button</code>.
+          </p>
+          <div class="content-align">
+            <a class="action">Basic</a>
+            <a class="action warning">Edit</a>
+            <a class="action danger">Delete</a>
+            <a class="action info">Show</a>
+            <a class="action warning outline">Edit</a>
+            <a class="action danger outline">Delete</a>
+            <a class="action info outline">Show</a>
+            <a class="action warning clean">Edit</a>
+            <a class="action danger clean">Delete</a>
+            <a class="action info clean">Show</a>
+          </div>
+          <!-- <h3>Exemplo:</h3> -->
+          <table class="gt-table">
+            <thead>
+              <tr>
+                <td>
+                  Nome
+                </td>
+                <td>
+                  E-mail
+                </td>
+                <td>
+                  Ações
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  JP Rodrigues
+                </td>
+                <td>
+                  email@example.com
+                </td>
+                <td>
+                  <a class="action warning">Edit</a>
+                  <a href="#" class="action danger">Delete</a>
+                  <a href="#" class="action info">Show</a>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot >
+              <tr>
+                <td colspan="3">Exemplo de utilização;</td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="code-block html">
+            <code class="tx">&lt;!-- Exemplo de .action. --&gt;</code>
+            <code>
+              <span class="el">&lt;</span>a
+              <span class="attr">class</span><span class="el">=</span><span class="value">"action info"</span>
+              <span class="attr">href</span><span class="el">=</span><span class="value">"product/255"</span><span class="el">&gt;</span><span class="tx">Detalhes</span><span class="el">&lt;/</span>a<span class="el">&gt;</span>
+            </code>
+          </div>
+        </section>
+        <section id="dropdowns" class="gt-section">
+          <h2>Dropdowns & Dropups</h2>
+          <p>
+            Um dropdown/up é um menu contextual, que deve conter uma lista de links. É dependente do GainTime JS.
+          </p>
+          <p>
+            Recomendamos que você utlize div para colocar a classe dropdown ou a classe dropdup, e que dentro de <code>div</code> você tenha um elemento que descreva o contexto, e um elemento do tipo lista não ordenada (<code>ul</code>).
+          </p>
+          <div class="inform info">
+            <p>
+              Dropdowns não são botões, mas podem ser tão estilosos quanto eles.
+            </p>
+          </div>
+          <div>
+            <h3>Classes:</h3>
+            <ul>
+              <li><strong><code>.dropdown, .dropdown-left</code></strong>: Lista originada da baixa esquerda.</li>
+              <li><strong><code>.dropdown-right</code></strong>: Lista originada da baixa direita.</li>
+              <li><strong><code>.dropup, .dropup-left</code></strong>: Lista originada da alta esquerda.</li>
+              <li><strong><code>.dropup-right</code></strong>: Lista originada da alta direita.</li>
+            </ul>
+          </div>
+          <div class="content-align">
+            <div class="dropdown">
+              <span>Basic</span>
+              <ul>
+                <li>A</li>
+              </ul>
+            </div>
+            <div class="btn dropdown info">
+              <span>DOWN-LEFT</span>
+              <ul>
+                <li>A</li>
+              </ul>
+            </div>
+            <div class="btn dropdown-right danger">
+              <span>DOWN-RIGHT</span>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+              </ul>
+            </div>
+            <div class="btn dropup success clean">
+              <span>UP-LEFT</span>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+              </ul>
+            </div>
+            <div class="btn dropup-right warning outline">
+              <span>UP-RIGHT</span>
+              <ul>
+                <li>C</li>
+                <li>B</li>
+                <li>A</li>
+              </ul>
+            </div>
+            <div class="dropdown-right">
+              <img style="height: 50px" src="assets/img/wm.png" alt="Black Power" />
+              <ul>
+                <li>OI TUDO BEM?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="">
+          <div class="btn dropdown lg info">
+            <span>.lg DOWN-LEFT</span>
+            <ul>
+              <li>A</li>
+            </ul>
+          </div>
+          <div class="btn dropdown info">
+            <span>DOWN-LEFT</span>
+            <ul>
+              <li>A</li>
+            </ul>
+          </div>
+          <div class="btn dropdown sm info">
+            <span>.sm DOWN-LEFT</span>
+            <ul>
+              <li>A</li>
+            </ul>
+          </div>
+
+          </div>
+          <div class="code-block html">
+            <code class="tx">&lt;!-- Exemplo de .dropdown estilizado como um .btn, com lista alinhada à direita. --&gt;</code>
+            <pre>
+<code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"btn dropdown-right danger"</span><span class="el">&gt;</span></code>
+  <code><span class="el">&lt;</span>span<span class="el">&gt;</span><span class="tx">DOWN RIGHT</span><span class="el">&lt;</span>/span<span class="el">&gt;</span></code>
+  <code><span class="el">&lt;</span>ul<span class="el">&gt;</span></code>
+    <code><span class="el">&lt;</span>li<span class="el">&gt;</span><span class="tx">A</span><span class="el">&lt;</span>/li<span class="el">&gt;</span></code>
+    <code><span class="el">&lt;</span>li<span class="el">&gt;</span><span class="tx">B</span><span class="el">&lt;</span>/li<span class="el">&gt;</span></code>
+  <code><span class="el">&lt;</span>/ul<span class="el">&gt;</span></code>
+<code><span class="el">&lt;</span>/div<span class="el">&gt;</span></code>
+            </pre>
+          </div>
+        </section>
+        <section id="tags" class="gt-section">
+          <h1>Tags</h1>
+          <p>
+            As <code>.tag</code> são rótulos de ênfase visual para serem adicionadas preferencialmente em <code>span</code>, em phrase tags (ex: <code>strong</code>, <code>em</code>, <code>code</code>, <code>samp</code>, <code>kbd</code>, <code>var</code>), ou em formatting tags (ex: <code>b</code>, <code>i</code>, <code>u</code>, <code>strike</code>).
+          </p>
+          <div class="">
+            <h4>Aluno relata sobre prova fácil de cálculo. <span class="tag danger">BUG</span></h4>
+            <i class="tag info outline">OLA</i>
+            <span class="tag danger clean">OLA</span>
+            <span class="tag warning">OLA</span>
+            <span class="tag success">OLA</span>
+            <span class="tag">OLA</span>
+          </div>
+          <div class="code-block html">
+            <code><span class="el">&lt;</span>h4<span class="el">&gt;</span><span class="tx">Exemplo de utilização da classe</span> <span class="el">&lt;</span>span <span class="attr">class</span><span class="el">=</span><span class="value">"tag"</span><span class="el">&gt;</span><span class="tx">.tag</span><span class="el">&lt;/</span>span<span class="el">&gt;</span><span class="el">&lt;/</span>h4<span class="el">&gt;</span></code>
+          </div>
+        </section>
+        <section id="badges" class="gt-section">
+          <h1>Badges</h1>
+          <p>
+            Os <code>.badge</code> são uma boa opção para contadores de notificações e afins. Eles dão um realce arredondado em elementos do tipo <code>span</code>.
+          </p>
+          <div class="content-align">
+            <a href="#">Inbox <span class="badge">42</span></a>
+            <button class="btn" type="button" name="button">Basic<span class="badge">42</span></button>
+            <button class="btn dark" type="button" name="button">Success<span class="badge">42</span></button>
+            <span class="tag danger"><span class="badge">19</span></span>
+            <span class="tag outline warning"><span class="badge">08</span></span>
+            <button>Exemplo<span class="badge">96</span></button>
+          </div>
+
+          <div class="code-block html">
+            <code><span class="el">&lt;</span>button<span class="el">&gt;</span><span class="tx">Exemplo</span><span class="el">&lt;</span>span <span class="attr">class</span><span class="el">=</span><span class="value">"badge"</span><span class="el">&gt;</span><span class="tx">2</span><span class="el">&lt;/</span>span<span class="el">&gt;</span><span class="el">&lt;/</span>button<span class="el">&gt;</span></code>
+          </div>
+        </section>
+        <section id="informations" class="gt-section">
+          <h1>Informações</h1>
+          <p>
+            A classe de informação <code>.inform</code> foi construida para criar caixas de texto com destaque. Muito útil para textos de alerta ou aviso. Deve ser adicionada ao elemento <code>div</code>, preferencialmente, e unida a <code>.warning</code>, <code>.info</code>, <code>.success</code> ou <code>.danger</code>.
+          </p>
+          <div class="inform warning">
+            <h2>Atenção!</h2>
+            <p>
+              Este é um típico <code>.inform</code>.
+            </p>
+            <p>
+              No <code>.inform</code> você pode ficar a vontade para usar tags de texto. :)
+            </p>
+          </div>
+
+          <div class="code-block html">
+            <code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"inform"</span><span class="el">&gt;</code>
+            <code><span class="el">&lt;/</span>div<span class="el">&gt;</span></code>
+          </div>
+        </section>
+        <section id="messages" class="gt-section">
+          <h1>Mensagens</h1>
+          <p>
+            As mensagens <code>.msg</code> são semelhantes às informações, porém são feitas para serem temporárias e, por isso, devem ser acompanhadas por um botão  <code>type="button" class="close"</code> que vai fazer com que a <code>.msg</code> seja removida do DOM.
+          </p>
+          <p>
+            Na <code>.msg</code> você pode ficar a vontade para usar tags de texto. :)
+          </p>
+          <p>
+            A função de fechar a mensagem é totalmente dependente do GainTime JS.
+          </p>
+          <div class="msg success">
+            <button type="button" class="close"></button>
+            <p>
+              Opa! OOOOOPAAAAAA!
+            </p>
+          </div>
+          <div class="msg danger">
+            <button type="button" class="close"></button>
+            <p>
+              Opa! OOOOOPAAAAAA!
+            </p>
+          </div>
+          <div class="msg warning">
+            <button type="button" class="close"></button>
+            <p>
+              Opa! OOOOOPAAAAAA!
+            </p>
+          </div>
+          <div class="msg info">
+            <button type="button" class="close"></button>
+            <p>
+              Opa! OOOOOPAAAAAA!
+            </p>
+          </div>
+          <div class="code-block html">
+            <code class="tx">&lt;!-- Exemplo de .dropdown estilizado como um .btn, com lista alinhada à direita. --&gt;</code>
+            <pre>
+<code><span class="el">&lt;</span>div <span class="attr">class</span><span class="el">=</span><span class="value">"msg success"</span><span class="el">&gt;</span></code>
+  <code><span class="el">&lt;</span>button <span class="attr">type</span><span class="el">=</span><span class="value">"button"</span> <span class="attr">class</span><span class="el">=</span><span class="value">"close"</span><span class="el">&gt;</span><span class="tx"></span><span class="el">&lt;/</span>button<span class="el">&gt;</span></code>
+  <code><span class="el">&lt;</span>p<span class="el">&gt;</span><span class="tx">Exemplo de mensagem temporária.</span><span class="el">&lt;/</span>p<span class="el">&gt;</span></code>
+<code><span class="el">&lt;/</span>div<span class="el">&gt;</span></code>
+            </pre>
+          </div>
+        </section>
+        <section id="bars" class="gt-section">
+            <h1>Barra de progresso</h1>
+            <p>
+              As barras de progresso <code>.bar</code> são dependentes de HTML5 e GainTime JS. Elas possuem uma estrutura particular que precisa ser seguida.
+            </p>
+            <p>
+              A estrutura básica é a seguinte:
+            </p>
+            <div class="code-block html">
+              <code>
+                <span class="el">&lt;</span>div
+                <span class="attr">class</span><span class="el">=</span><span class="value">"bar"</span>
+                <span class="attr">data-percentage</span><span class="el">=</span><span class="value">"20%"</span>
+                <span class="attr">data-color</span><span class="el">=</span><span class="value">"success"</span>
+                <span class="attr">data-tooltip</span><span class="el">=</span><span class="value">"Test"</span>
+                <span class="attr">data-text</span><span class="el">=</span><span class="value">"20% do total"<span class="el">&gt;</span>
+              </code>
+            </div>
+            <p>
+              <strong>Atributos obrigatórios:</strong>
+            </p>
+            <ul>
+              <li><code>class="bar"</code> - Classe que ativa a barra de progresso.</li>
+              <li><code>data-percentage="x%"</code> - Atributo que determina o progresso.</li>
+            </ul>
+            <p>
+              <strong>Atributos opcionais:</strong>
+            </p>
+            <ul>
+              <li><code>class="bar"</code> - Classe que ativa a barra de progresso.</li>
+              <li><code>data-color=""</code> - Atributo que determina a cor do indicador de progresso. Variações: <code>.success</code>, <code>.warning</code>, <code>.danger</code>, <code>.info</code>. O padrão é <span class="tag" style="background-color: #2e7bcf; color: #FFF">#2e7bcf</span>, mas você pode criar a sua própria classe de cor e atribuir ao <code>data-color</code>.</li>
+              <li><code>data-tooltip=""</code> - Determina a mensagem que vai aparecer quando a barra estiver em <code>:hover</code>.</li>
+              <li><code>data-text=""</code> - Determina o texto que deve aparecer no indicador de progresso.</li>
+            </ul>
+            <div class="bar" data-percentage="20%" data-color="success" data-tooltip="Test" data-text="20% do total"></div>
+            <div class="bar" data-percentage="40%" data-color="warning" data-tooltip="40"></div>
+            <div class="bar" data-percentage="60%" data-color="danger" data-tooltip="60"></div>
+            <div class="bar" data-percentage="80%" data-color="info" data-tooltip="80"></div>
+            <div class="bar" data-percentage="100%" data-tooltip="100"></div>
+          </section>
+          <section id="tooltips" class="gt-section">
+            <h2>Tooltips</h2>
+            <p>Essa não é a melhor implementação de tooltip que você vai ver na vida, mas pode ser útil. Temos apenas Tooltips que aparecem abaixo do elemento, e eles são ativados através do atributo <code>data-tooltip="Seu Texto Aqui"</code>. As barras de progresso da seção anterior são exemplos de uso.</p>
+          </section>
+          <section id="cards" class="gt-section">
+            <h2>Cards</h2>
+            <p>Os cards são caixas flexíveis muito úteis na hora de listar itens com título, imagem e descrição.</p>
+            <div class="code-block html">
+              <pre>
+<code>
+  <span class="el">&lt;</span>div
+  <span class="attr">class</span><span class="el">=</span><span class="value">"card"</span><span class="el">&gt;</span>
+</code>
+  <code>
+    <span class="el">&lt;</span>div
+    <span class="attr">class</span><span class="el">=</span><span class="value">"card-body"</span><span class="el">&gt;</span>
+  </code>
+    <code>
+      <span class="el">&lt;</span>h4
+      <span class="attr">class</span><span class="el">=</span><span class="value">"card-title"</span><span class="el">&gt;</span><span class="tx">Título do card</span><span class="el">&lt;/</span>h4<span class="el">&gt;</span>
+    </code>
+    <code>...</code>
+    <code>
+      <span class="el">&lt;</span>div
+      <span class="attr">class</span><span class="el">=</span><span class="value">"card-img"</span><span class="el">&gt;</span>
+    </code>
+      <code>
+        <span class="el">&lt;</span>img<span class="el">/&gt;</span>
+      </code>
+    <code>
+      <span class="el">&lt;/</span>div<span class="el">&gt;</span>
+    </code>
+  <code>
+    <span class="el">&lt;/</span>div<span class="el">&gt;</span>
+  </code>
+<code>
+  <span class="el">&lt;/</span>div<span class="el">&gt;</span>
+</code>
+              </pre>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">project11</h4>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <h3>Card com Grid System</h3>
+            <div class="row flex-box">
+                <div class="card xs-6 sm-4 md-3 hoverable">
+                  <div class="card-img">
+                    <img id="project-profile-5" src="https://jprodrigues70.github.io/presentations/assets/img/aweb.png">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">project7</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <div class="card xs-6 sm-4 md-3 hoverable">
+                  <div class="card-body">
+                    <h4 class="card-title">project7</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="card-img">
+                      <img id="project-profile-5" src="https://jprodrigues70.github.io/presentations/assets/img/aweb.png">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+          <section id="verticals" class="gt-section">
+            <h1>Listas verticais</h1>
+            <p>A classe <code>.vertical-list</code> vai colocar todos os itens que são seus filhos diretos em formato de lista vertical.</p>
+            <ul class="vertical-list bordered striped">
+              <li class="active">ASD</li>
+              <li>ASD</li>
+              <li>ASD</li>
+            </ul>
+            <div class="vertical-list bordered">
+              <a type="a" class="btn" name="a">A</a>
+              <a type="a" class="btn" name="a">A</a>
+              <a type="a" class="btn" name="a">A</a>
+            </div>
+            <h2>Vertical List table</h2>
+            <p>A classe <code>.vertical-list-table</code> vai colocar todos os itens que são seus filhos diretos em formato de tabela vertical. A <code>.vertical-list-table</code> pode ser ainda concatenada com as classes <code>.bordered</code> e <code>.striped</code>.</p>
+            <ul class="vertical-list-table bordered striped">
+              <li class="active">Item com a classe <code>.active</code></li>
+              <li>ASD</li>
+              <li>ASD</li>
+            </ul>
+            <h3>Lista de <code>.btn</code>:</h3>
+            <div class="vertical-list-table bordered">
+              <a type="a" class="btn" name="a">A</a>
+              <a type="a" class="btn" name="a">A</a>
+              <a type="a" class="btn" name="a">A</a>
+            </div>
+          </section>
+          <footer class="dark flex-box">
+            <div class="col">
+              <p>
+                <strong>GainTime</strong>, por <a href="https://github.com/jprodrigues70">JP Rodrigues</a>
+              </p>
+              <p>Código sob a licença <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+              <a href="https://github.com/GainTime/gainTime" class="content-align">
+                <svg fill="#FFF" aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> <p>
+                  GitHub
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <p>
+                Contribua com o <a href="https://github.com/GainTime/gaintime-factory">GainTime</a>.
+              </p>
+              <p>
+                Faça <a href="https://github.com/GainTime/gaintime-factory/issues">report de erros</a>!
+              </p>
+              <p>
+                Faça <a href="https://github.com/GainTime/gaintime-factory/issues">sugestões</a>!
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                Versão v3.0.0
+              </p>
+            </div>
+          </footer>
+        </div>
+    </div>
+
     <script type="text/javascript" src="gaintime/js/gaintime.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
